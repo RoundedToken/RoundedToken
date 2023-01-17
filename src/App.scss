@@ -1,0 +1,50 @@
+html,
+body,
+#root,
+.App {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+
+    ::selection {
+        color: white;
+        background-color: var(--text-color);
+    }
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    transition: color 1.5s;
+    background-color: var(--second-color);
+    transition: background-color 1.5s;
+}
+
+#light {
+    --first-color: rgb(191, 194, 197);
+    --second-color: white;
+    --text-color: rgb(119 76 181);
+    --image-color: rgb(187 144 248);
+    --rotate: 180deg;
+}
+
+#dark {
+    --first-color: rgb(36, 37, 38);
+    --second-color: rgb(27 27 29);
+    --text-color: rgb(187 144 248);
+    --image-color: rgb(119 76 181);
+}

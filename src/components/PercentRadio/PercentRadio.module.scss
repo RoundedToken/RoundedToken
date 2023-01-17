@@ -1,0 +1,38 @@
+.percentRadio {
+    transition: background-color 1.5s;
+    background-color: var(--second-color);
+    border-radius: 5px;
+    margin-inline: 2px;
+
+    input:checked + label {
+        color: var(--text-color);
+        transition: color 1.5s, border-color 1.5s;
+        border: 1px solid var(--text-color);
+    }
+}
+
+.input {
+    display: none;
+}
+.label {
+    display: flex;
+    cursor: pointer;
+    width: 48px;
+    height: 32px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    color: var(--image-color);
+    transition: color 1.5s;
+}
+
+.filterLight {
+    filter: invert(30%) sepia(84%) saturate(1270%) hue-rotate(242deg) brightness(84%) contrast(78%);
+    transition: filter 1.5s;
+}
+
+.filterDark {
+    filter: invert(75%) sepia(58%) saturate(4161%) hue-rotate(214deg) brightness(102%) contrast(94%);
+    transition: filter 1.5s;
+}

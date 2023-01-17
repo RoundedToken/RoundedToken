@@ -1,0 +1,29 @@
+.decimalRadio {
+    transition: background-color 1.5s;
+    background-color: var(--second-color);
+    border-radius: 5px;
+    margin-inline: 2px;
+
+    input:checked + label {
+        color: var(--text-color);
+        transition: color 1.5s, border-color 1.5s;
+        border: 1px solid var(--text-color);
+    }
+}
+
+.input {
+    display: none;
+}
+.label {
+    display: flex;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+
+    font-size: large;
+    color: var(--image-color);
+    transition: color 1.5s;
+}

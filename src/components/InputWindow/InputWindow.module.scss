@@ -1,0 +1,36 @@
+.inputBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: max-content;
+    margin-inline: auto;
+    border-radius: 15px;
+    background-color: var(--first-color);
+    transition: background-color 1.5s;
+
+    h5 {
+        margin: 0px;
+        margin-right: 10px;
+    }
+
+    input {
+        outline: 0px;
+        margin-inline: 5px;
+        border: 0px;
+        border-radius: 5px;
+        height: 28px;
+        width: 387px;
+        padding: 0px;
+        background-color: var(--second-color);
+        color: var(--text-color);
+        transition: background-color 1.5s, color 1.5s;
+        text-align: center;
+    }
+}
+
+.inputCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

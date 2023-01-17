@@ -1,0 +1,51 @@
+.technologies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 20px;
+    padding: 20px;
+    width: max-content;
+    margin-inline: auto;
+    border-radius: 15px;
+    background-color: var(--first-color);
+    transition: background-color 1.5s;
+
+    h1 {
+        text-align: center;
+    }
+
+    img {
+        border: 0px;
+        border-radius: 10px;
+    }
+}
+
+.rowEven {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowOdd {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-color);
+    transition: background-color 1.5s;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+}
