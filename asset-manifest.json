@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/RoundedToken/static/css/main.ebe4fe05.css",
+    "main.js": "/RoundedToken/static/js/main.731a9925.js",
+    "static/media/babel.svg": "/RoundedToken/static/media/babel.71f0384e46057b70e9275750d71e34e3.svg",
+    "static/media/css-modules.png": "/RoundedToken/static/media/css-modules.4aabd776fc578dc30128.png",
+    "static/media/prettier.svg": "/RoundedToken/static/media/prettier.7109cf6b693b9fc89dda2e9a5a5c9835.svg",
+    "static/media/sass.svg": "/RoundedToken/static/media/sass.8aa78a8393470431c8036541f0708bd7.svg",
+    "static/media/react.svg": "/RoundedToken/static/media/react.1520bd67b9711ed91ace46b169bc2491.svg",
+    "static/media/jsx.svg": "/RoundedToken/static/media/jsx.543724f36157128ea005f34d24517301.svg",
+    "static/media/react-router.svg": "/RoundedToken/static/media/react-router.7f2e263f483c9280a8bd0af2e3c6a4a7.svg",
+    "static/media/redux.svg": "/RoundedToken/static/media/redux.954b3f427d28b3746c04a3f317fcdcde.svg",
+    "static/media/node-js.svg": "/RoundedToken/static/media/node-js.7ca28bcc5b19ce40dfc23043cfb31f27.svg",
+    "static/media/email.svg": "/RoundedToken/static/media/email.94e13d60b17ce0834b6a5505e78d6e98.svg",
+    "static/media/github.svg": "/RoundedToken/static/media/github.95ad9234e1509d5c93ffe0a9f7eb217a.svg",
+    "static/media/css3.svg": "/RoundedToken/static/media/css3.9cecabbf6ce67609c48bc4f280a11002.svg",
+    "static/media/git.svg": "/RoundedToken/static/media/git.4336ebd4c97bfade2caadc792dcad1d0.svg",
+    "index.html": "/RoundedToken/index.html",
+    "static/media/copy.svg": "/RoundedToken/static/media/copy.8c4e8a0583ce42038b5b27b8121be59f.svg",
+    "static/media/sliders.svg": "/RoundedToken/static/media/sliders.813b362a1b3523c788931c85d58941bc.svg",
+    "static/media/tailwind.svg": "/RoundedToken/static/media/tailwind.31e47c66de44e87d88b79bde38949849.svg",
+    "static/media/vs.svg": "/RoundedToken/static/media/vs.5dd947ca06ea7841c9f3440a0a3d27ed.svg",
+    "static/media/javascript.svg": "/RoundedToken/static/media/javascript.218515feb76f692771fe00cfeadc46c8.svg",
+    "static/media/html.svg": "/RoundedToken/static/media/html.6e7b1b463015c056aeb9a624c8dc2876.svg",
+    "static/media/npm.svg": "/RoundedToken/static/media/npm.0bdcc5bd9f907afad50533ddcab48fe9.svg",
+    "static/media/logo.svg": "/RoundedToken/static/media/logo.5dffb9b256c66db96da028d517763e30.svg",
+    "main.ebe4fe05.css.map": "/RoundedToken/static/css/main.ebe4fe05.css.map",
+    "main.731a9925.js.map": "/RoundedToken/static/js/main.731a9925.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ebe4fe05.css",
+    "static/js/main.731a9925.js"
+  ]
+}
