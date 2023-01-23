@@ -34,9 +34,16 @@ body {
     transition: background-color 1.5s;
 }
 
+.anchor {
+    background-color: var(--second-color);
+    transition: background-color 1.5s;
+    height: 85px;
+}
+
 #light {
     --first-color: rgb(191, 194, 197);
     --second-color: white;
+    --alternative-color: rgb(36, 37, 38);
     --text-color: rgb(119 76 181);
     --image-color: rgb(187 144 248);
     --rotate: 180deg;
@@ -45,6 +52,7 @@ body {
 #dark {
     --first-color: rgb(36, 37, 38);
     --second-color: rgb(27 27 29);
+    --alternative-color: rgb(191, 194, 197);
     --text-color: rgb(187 144 248);
     --image-color: rgb(119 76 181);
 }

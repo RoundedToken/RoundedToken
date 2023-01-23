@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './DecimalsRadio.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { setDecimals } from '../../redux/inputSlice';
+import { setDecimalsCount } from '../../redux/inputSlice';
 
 const DecimalsRadio = ({ value, id }) => {
-    const decimals = useSelector((state) => state.input.decimals);
+    const decimalsCount = useSelector((state) => state.input.decimalsCount);
     const dispatch = useDispatch();
 
     return (
@@ -14,8 +14,8 @@ const DecimalsRadio = ({ value, id }) => {
                 id={id}
                 type="radio"
                 name="digits"
-                onChange={() => dispatch(setDecimals(value))}
-                checked={decimals === value ? true : false}
+                onChange={() => dispatch(setDecimalsCount(value))}
+                checked={decimalsCount === value ? true : false}
             />
             <label htmlFor={id} className={styles.label}>
                 {value}

@@ -1,0 +1,20 @@
+.limitOptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    select {
+        outline: none;
+        color: var(--text-color);
+        background-color: var(--second-color);
+        transition: color 1.5s, background-color 1.5s;
+        border: 0;
+        border-radius: 5px;
+        height: 28px;
+    }
+
+    option {
+        text-align: center;
+    }
+}

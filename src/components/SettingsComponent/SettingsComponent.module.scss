@@ -1,0 +1,92 @@
+.settingsComponentClose {
+    height: 0px;
+    background-color: var(--first-color);
+    margin-inline: auto;
+    border-radius: 15px;
+    transition: height 0.75s;
+}
+
+.settingsComponentOpen {
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    border-radius: 15px;
+    background-color: var(--first-color);
+    transition: height 0.75s, background-color 1.5s;
+    padding-inline: 25px;
+    gap: 25px;
+
+    h5 {
+        margin: 0px;
+        font-size: 16px;
+        transition: color 1.5s;
+    }
+}
+
+.decimals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        outline: 0px;
+        margin-inline: 5px;
+        border: 0px;
+        border-radius: 5px;
+        height: 28px;
+        width: 64px;
+        padding: 0px;
+        background-color: var(--second-color);
+        color: var(--text-color);
+        transition: background-color 1.5s, color 1.5s;
+        text-align: center;
+    }
+}
+
+.vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .input {
+        width: 336px;
+        position: relative;
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            padding: 0;
+            right: 0;
+            right: 5px;
+            top: 0;
+            top: 7px;
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+        }
+
+        input {
+            width: 100%;
+            outline: 0px;
+            border: 0px;
+            border-radius: 5px;
+            height: 28px;
+            padding: 0px;
+            background-color: var(--second-color);
+            color: var(--text-color);
+            transition: background-color 1.5s, color 1.5s;
+            text-align: center;
+        }
+    }
+}

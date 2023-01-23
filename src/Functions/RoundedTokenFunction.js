@@ -1,4 +1,4 @@
-function main(float, dec, limit) {
+function main(float, dec, limit, mode) {
     let number = float;
     let decimals = '';
     let integers = number;
@@ -138,43 +138,137 @@ function main(float, dec, limit) {
         upFloat = upFloat.reverse();
         up16 = up16.reverse();
 
-        const lim = limit === '' ? Number.MAX_VALUE : Number(limit);
-
         let uppest;
         let uppestIndex;
-        for (let i = upDiff.length - 1; i >= 0; i--) {
-            if (upDiff[i][0] > lim) {
-                if (i !== upDiff.length - 1) {
-                    uppest = upFloat[i + 1];
-                    uppestIndex = i + 1;
-                }
-                break;
-            }
-        }
-
         let lowest;
         let lowestIndex;
-        for (let i in lowDiff) {
-            if (lowDiff[i][0] > lim) {
-                if (i !== '0') {
-                    lowest = lowFloat[Number(i) - 1];
-                    lowestIndex = Number(i) - 1;
-                }
-                break;
-            }
-        }
+        if (mode === '%') {
+            const lim = limit === '' ? Number.MAX_VALUE : Number(limit);
 
-        if (uppest === undefined) {
-            if (upFloat.length > 0 && upDiff[0][0] < lim) {
-                uppest = upFloat[0];
-                uppestIndex = 0;
-            } else uppest = numberFloat;
-        }
-        if (lowest === undefined) {
-            if (lowFloat.length > 0 && lowDiff[lowFloat.length - 1][0] < lim) {
-                lowest = lowFloat[lowFloat.length - 1];
-                lowestIndex = lowFloat.length - 1;
-            } else lowest = numberFloat;
+            for (let i = upDiff.length - 1; i >= 0; i--) {
+                if (upDiff[i][0] > lim) {
+                    if (i !== upDiff.length - 1) {
+                        uppest = upFloat[i + 1];
+                        uppestIndex = i + 1;
+                    }
+                    break;
+                }
+            }
+
+            for (let i in lowDiff) {
+                if (lowDiff[i][0] > lim) {
+                    if (i !== '0') {
+                        lowest = lowFloat[Number(i) - 1];
+                        lowestIndex = Number(i) - 1;
+                    }
+                    break;
+                }
+            }
+
+            if (uppest === undefined) {
+                if (upFloat.length > 0 && upDiff[0][0] < lim) {
+                    uppest = upFloat[0];
+                    uppestIndex = 0;
+                } else uppest = numberFloat;
+            }
+            if (lowest === undefined) {
+                if (lowFloat.length > 0 && lowDiff[lowFloat.length - 1][0] < lim) {
+                    lowest = lowFloat[lowFloat.length - 1];
+                    lowestIndex = lowFloat.length - 1;
+                } else lowest = numberFloat;
+            }
+        } else if (mode === 'decimals') {
+            const lim = BigInt(''.padStart(Number(limit), '9'));
+
+            for (let i = upDiff.length - 1; i >= 0; i--) {
+                if (BigInt(upDiff[i][1].slice(upDiff[i][1].indexOf('.') + 1)) > lim) {
+                    if (i !== upDiff.length - 1) {
+                        uppest = upFloat[i + 1];
+                        uppestIndex = i + 1;
+                    }
+                    break;
+                }
+            }
+
+            for (let i in lowDiff) {
+                if (BigInt(lowDiff[i][1].slice(lowDiff[i][1].indexOf('.') + 1)) > lim) {
+                    if (i !== '0') {
+                        lowest = lowFloat[Number(i) - 1];
+                        lowestIndex = Number(i) - 1;
+                    }
+                    break;
+                }
+            }
+
+            if (uppest === undefined) {
+                if (
+                    upFloat.length > 0 &&
+                    BigInt(upDiff[0][1].slice(upDiff[0][1].indexOf('.') + 1)) <= lim
+                ) {
+                    uppest = upFloat[0];
+                    uppestIndex = 0;
+                } else uppest = numberFloat;
+            }
+            if (lowest === undefined) {
+                if (
+                    lowFloat.length > 0 &&
+                    BigInt(
+                        lowDiff[lowFloat.length - 1][1].slice(
+                            lowDiff[lowFloat.length - 1][1].indexOf('.') + 1
+                        )
+                    ) <= lim
+                ) {
+                    lowest = lowFloat[lowFloat.length - 1];
+                    lowestIndex = lowFloat.length - 1;
+                } else lowest = numberFloat;
+            }
+        } else {
+            let lim;
+            if (limit.includes('.')) {
+                lim = BigInt(
+                    '1' +
+                        limit.slice(0, limit.indexOf('.')) +
+                        limit.slice(limit.indexOf('.') + 1, lDc + 2).padEnd(lDc, '0')
+                );
+            } else {
+                lim = BigInt('1' + limit + ''.padEnd(lDc, '0'));
+            }
+
+            for (let i = upDiff.length - 1; i >= 0; i--) {
+                if (BigInt('1' + upDiff[i][1].replace('.', '')) > lim) {
+                    if (i !== upDiff.length - 1) {
+                        uppest = upFloat[i + 1];
+                        uppestIndex = i + 1;
+                    }
+                    break;
+                }
+            }
+
+            for (let i in lowDiff) {
+                if (BigInt('1' + lowDiff[i][1].replace('.', '')) > lim) {
+                    if (i !== '0') {
+                        lowest = lowFloat[Number(i) - 1];
+                        lowestIndex = Number(i) - 1;
+                    }
+                    break;
+                }
+            }
+
+            if (uppest === undefined) {
+                if (upFloat.length > 0 && BigInt('1' + upDiff[0][1].replace('.', '')) <= lim) {
+                    uppest = upFloat[0];
+                    uppestIndex = 0;
+                } else uppest = numberFloat;
+            }
+            if (lowest === undefined) {
+                if (
+                    lowFloat.length > 0 &&
+                    BigInt('1' + lowDiff[lowFloat.length - 1][1].replace('.', '')) <= lim
+                ) {
+                    lowest = lowFloat[lowFloat.length - 1];
+                    lowestIndex = lowFloat.length - 1;
+                } else lowest = numberFloat;
+            }
         }
 
         return {
@@ -195,7 +289,7 @@ function main(float, dec, limit) {
             numberStr16,
         };
     }
-    const output = bestPrice(integers, decimals, limit);
+    const output = bestPrice(integers, decimals, limit, mode);
     return output;
 }
 

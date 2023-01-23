@@ -1,34 +1,61 @@
 import React from 'react';
-import main from '../../RoundedToken';
+import main from '../../Functions/RoundedTokenFunction';
 import styles from './OutputWindow.module.scss';
-import { useSelector } from 'react-redux';
-import copy from '../../assets/copy.svg';
+import { useDispatch, useSelector } from 'react-redux';
 import Footer from '../Footer/Footer';
-
-function copyEvent(id) {
-    var str = document.getElementById(id);
-    window.getSelection().selectAllChildren(str);
-    document.execCommand('Copy');
-}
+import minimize from '../../assets/minimize.png';
+import maximize from '../../assets/maximize.png';
+import CopyButton from '../CopyButton/CopyButton';
+import { setTableMode } from '../../redux/inputSlice.js';
+import { toast } from 'react-toastify';
+import TableInfo from '../TableInfo/TableInfo';
+import MaxApprove from '../MaxApprove/MaxApprove';
 
 const OutputWindow = () => {
-    const decimals = useSelector((state) => state.input.decimals);
-    const theme = useSelector((state) => state.theme.color);
+    const dispatch = useDispatch();
+    const decimalsCount = useSelector((state) => state.input.decimalsCount);
     const float = useSelector((state) => state.input.float);
-    const limit = useSelector((state) => state.input.percents);
-    const mode = useSelector((state) => state.input.mode);
-    const output = main(float, decimals, limit);
+    const tableMode = useSelector((state) => state.input.tableMode);
+    const limitOptions = useSelector((state) => state.input.limitOptions);
+    const limit = useSelector((state) => {
+        if (limitOptions === '%') return state.input.percents;
+        else if (limitOptions === 'decimals') return state.input.decimalsLimit;
+        else return state.input.absoluteLimit;
+    });
+    const output = main(float, decimalsCount, limit, limitOptions);
+    const theme = useSelector((state) => state.theme.color);
+
+    const changeMode = () => {
+        dispatch(setTableMode());
+        toast.success(tableMode ? 'Short table mode!' : 'Full table mode!');
+    };
 
     return (
         <div className={styles.output}>
-            {mode ? (
+            {tableMode ? (
                 float === '' ? null : (
                     <>
-                        <h5>Full table</h5>
+                        <MaxApprove />
+                        <TableInfo />
+                        <button
+                            className={styles.screenSize}
+                            onClick={changeMode}
+                            title="To short mode"
+                        >
+                            <img
+                                className={
+                                    theme === 'dark' ? styles.filterDark : styles.filterLight
+                                }
+                                src={minimize}
+                                alt="minimize"
+                                width={16}
+                                height={16}
+                            />
+                        </button>
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Float</th>
+                                    <th>Token</th>
                                     <th>Difference</th>
                                     <th>Diff, %</th>
                                     <th>Price</th>
@@ -42,26 +69,14 @@ const OutputWindow = () => {
                                           <tr
                                               style={
                                                   output.uppest === output.upFloat[i]
-                                                      ? { color: 'rgb(32,201,87)' }
+                                                      ? { color: 'rgb(25,184,76)' }
                                                       : null
                                               }
                                               key={i}
                                           >
                                               <td style={{ display: 'flex' }}>
                                                   <div id={`up${i}`}>{output.upFloat[i]}</div>
-                                                  <button onClick={() => copyEvent(`up${i}`)}>
-                                                      <img
-                                                          alt="copy"
-                                                          src={copy}
-                                                          width={16}
-                                                          height={16}
-                                                          className={
-                                                              theme === 'dark'
-                                                                  ? styles.filterDark
-                                                                  : styles.filterLight
-                                                          }
-                                                      />
-                                                  </button>
+                                                  <CopyButton id={`up${i}`} />
                                               </td>
                                               <td style={{ textAlign: 'right' }}>
                                                   {output.upDiff[i][1]}
@@ -75,25 +90,13 @@ const OutputWindow = () => {
                                     style={
                                         output.lowestIndex === undefined &&
                                         output.uppestIndex === undefined
-                                            ? { color: 'rgb(32,201,87)' }
+                                            ? { color: 'rgb(25,184,76)' }
                                             : { color: 'rgb(255,95,94)' }
                                     }
                                 >
                                     <td style={{ display: 'flex' }}>
                                         <div id="number">{output.numberFloat}</div>
-                                        <button onClick={() => copyEvent('number')}>
-                                            <img
-                                                alt="copy"
-                                                src={copy}
-                                                width={16}
-                                                height={16}
-                                                className={
-                                                    theme === 'dark'
-                                                        ? styles.filterDark
-                                                        : styles.filterLight
-                                                }
-                                            />
-                                        </button>
+                                        <CopyButton id={'number'} />
                                     </td>
                                     <td>-</td>
                                     <td>-</td>
@@ -106,26 +109,19 @@ const OutputWindow = () => {
                                           <tr
                                               style={
                                                   output.lowest === output.lowFloat[i]
-                                                      ? { color: 'rgb(32,201,87)' }
+                                                      ? { color: 'rgb(25,184,76)' }
                                                       : null
                                               }
                                               key={i}
                                           >
-                                              <td style={{ display: 'flex' }}>
+                                              <td
+                                                  style={{
+                                                      display: 'flex',
+                                                      justifyContent: 'right',
+                                                  }}
+                                              >
                                                   <div id={`low${i}`}>{output.lowFloat[i]}</div>
-                                                  <button onClick={() => copyEvent(`low${i}`)}>
-                                                      <img
-                                                          alt="copy"
-                                                          src={copy}
-                                                          width={16}
-                                                          height={16}
-                                                          className={
-                                                              theme === 'dark'
-                                                                  ? styles.filterDark
-                                                                  : styles.filterLight
-                                                          }
-                                                      />
-                                                  </button>
+                                                  <CopyButton id={`low${i}`} />
                                               </td>
                                               <td style={{ textAlign: 'right' }}>
                                                   {output.lowDiff[i][1]}
@@ -141,11 +137,21 @@ const OutputWindow = () => {
                 )
             ) : float === '' ? null : (
                 <>
-                    <h5>Short table</h5>
+                    <MaxApprove />
+                    <TableInfo />
+                    <button className={styles.screenSize} onClick={changeMode} title="To full mode">
+                        <img
+                            className={theme === 'dark' ? styles.filterDark : styles.filterLight}
+                            src={maximize}
+                            alt="minimize"
+                            width={16}
+                            height={16}
+                        />
+                    </button>
                     <table>
                         <thead>
                             <tr>
-                                <th>Float</th>
+                                <th>Token</th>
                                 <th>Difference</th>
                                 <th>Diff, %</th>
                                 <th>Price</th>
@@ -154,22 +160,10 @@ const OutputWindow = () => {
                         </thead>
                         <tbody>
                             {output.uppestIndex === undefined ? null : (
-                                <tr style={{ color: 'rgb(32,201,87)' }}>
+                                <tr style={{ color: 'rgb(25,184,76)' }}>
                                     <td style={{ display: 'flex' }}>
                                         <div id="uppest">{output.upFloat[output.uppestIndex]}</div>
-                                        <button onClick={() => copyEvent('uppest')}>
-                                            <img
-                                                alt="copy"
-                                                src={copy}
-                                                width={16}
-                                                height={16}
-                                                className={
-                                                    theme === 'dark'
-                                                        ? styles.filterDark
-                                                        : styles.filterLight
-                                                }
-                                            />
-                                        </button>
+                                        <CopyButton id={'uppest'} />
                                     </td>
                                     <td style={{ textAlign: 'right' }}>
                                         {output.upDiff[output.uppestIndex][1]}
@@ -183,25 +177,13 @@ const OutputWindow = () => {
                                 style={
                                     output.lowestIndex === undefined &&
                                     output.uppestIndex === undefined
-                                        ? { color: 'rgb(32,201,87)' }
+                                        ? { color: 'rgb(25,184,76)' }
                                         : { color: 'rgb(255,95,94)' }
                                 }
                             >
                                 <td style={{ display: 'flex' }}>
                                     <div id="number">{output.numberFloat}</div>
-                                    <button onClick={() => copyEvent('number')}>
-                                        <img
-                                            alt="copy"
-                                            src={copy}
-                                            width={16}
-                                            height={16}
-                                            className={
-                                                theme === 'dark'
-                                                    ? styles.filterDark
-                                                    : styles.filterLight
-                                            }
-                                        />
-                                    </button>
+                                    <CopyButton id={'number'} />
                                 </td>
                                 <td>-</td>
                                 <td>-</td>
@@ -209,22 +191,10 @@ const OutputWindow = () => {
                                 <td>{output.numberStr16}</td>
                             </tr>
                             {output.lowestIndex === undefined ? null : (
-                                <tr style={{ color: 'rgb(32,201,87)' }}>
-                                    <td style={{ display: 'flex' }}>
+                                <tr style={{ color: 'rgb(25,184,76)' }}>
+                                    <td style={{ display: 'flex', justifyContent: 'right' }}>
                                         <div id="lowest">{output.lowFloat[output.lowestIndex]}</div>
-                                        <button onClick={() => copyEvent('lowest')}>
-                                            <img
-                                                alt="copy"
-                                                src={copy}
-                                                width={16}
-                                                height={16}
-                                                className={
-                                                    theme === 'dark'
-                                                        ? styles.filterDark
-                                                        : styles.filterLight
-                                                }
-                                            />
-                                        </button>
+                                        <CopyButton id={'lowest'} />
                                     </td>
                                     <td style={{ textAlign: 'right' }}>
                                         {output.lowDiff[output.lowestIndex][1]}

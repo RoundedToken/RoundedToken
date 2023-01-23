@@ -2,68 +2,64 @@ import React from 'react';
 import styles from './Footer.module.scss';
 import email from '../../assets/email.svg';
 import github from '../../assets/github.svg';
-import codewars from '../../assets/codewars.svg';
-import { useSelector } from 'react-redux';
-import hackerrank from '../../assets/hackerrank.svg';
-
-function copyEvent(id) {
-    var str = document.getElementById(id);
-    window.getSelection().selectAllChildren(str);
-    document.execCommand('Copy');
-}
+import codeWars from '../../assets/codeWars.svg';
+import hackerRank from '../../assets/hackerRank.svg';
+import SocialLink from '../SocialLink/SocialLink';
+import ImageButton from '../ImageButton/ImageButton';
+import copyFunction from '../../Functions/CopyFunction.js';
 
 const Footer = () => {
-    const theme = useSelector((state) => state.theme.color);
-
     return (
         <div className={styles.footer}>
-            <div>Write for suggestions:</div>
-            <div id="email" style={{ marginInline: '10px', fontStyle: 'italic' }}>
-                stepan.zip.07@gmail.com
+            <div className={styles.container}>
+                <h5>Write for suggestions</h5>
+                <h5 id="email" style={{ fontStyle: 'italic' }}>
+                    stepan.zip.07@gmail.com
+                </h5>
+                <ImageButton
+                    f={copyFunction}
+                    id={'email'}
+                    tooltipId={'tooltipEmail'}
+                    src={email}
+                    width={32}
+                    height={32}
+                    content={'Copy email'}
+                    place={'right'}
+                />
             </div>
-            <div className={styles.links}>
-                <button onClick={() => copyEvent('email')}>
-                    <img
-                        className={theme === 'dark' ? styles.filterDark : styles.filterLight}
-                        src={email}
-                        alt="email"
-                        width={32}
-                        height={32}
-                    />
-                </button>
-                <a rel="noreferrer" target={'_blank'} href="https://github.com/RoundedToken">
-                    <img
-                        className={theme === 'dark' ? styles.filterDark : styles.filterLight}
-                        src={github}
-                        alt="github"
-                    />
-                </a>
-                <a
-                    rel="noreferrer"
-                    target={'_blank'}
-                    href="https://www.codewars.com/users/RoundedToken"
-                >
-                    <img
-                        width={32}
-                        height={32}
-                        className={theme === 'dark' ? styles.filterDark : styles.filterLight}
-                        src={codewars}
-                        alt="github"
-                    />
-                </a>
-                <a
-                    rel="noreferrer"
-                    target={'_blank'}
-                    href="https://www.hackerrank.com/RoundedToken"
-                >
-                    <img
-                        width={32}
-                        height={32}
-                        className={theme === 'dark' ? styles.filterDark : styles.filterLight}
-                        src={hackerrank}
-                        alt="github"
-                    />
-                </a>
+
+            <div className={styles.container}>
+                <h5>If you like program, give it a star on GitHub!</h5>
+                <SocialLink
+                    id={'gitHub'}
+                    content={'Go to GitHub'}
+                    place={'right'}
+                    src={github}
+                    href={'https://github.com/RoundedToken/RoundedToken'}
+                    width={32}
+                    height={32}
+                />
+            </div>
+            <div className={styles.container}>
+                <h5>Check up my profiles</h5>
+                <SocialLink
+                    id={'codeWars'}
+                    content={'Go to CodeWars'}
+                    place={'bottom'}
+                    src={codeWars}
+                    href={'https://www.codeWars.com/users/RoundedToken'}
+                    width={32}
+                    height={32}
+                />
+                <SocialLink
+                    id={'hackerRank'}
+                    content={'Go to HackerRank'}
+                    place="bottom"
+                    src={hackerRank}
+                    href={'https://www.hackerrank.com/RoundedToken?hr_r=1'}
+                    width={32}
+                    height={32}
+                />
             </div>
         </div>
     );

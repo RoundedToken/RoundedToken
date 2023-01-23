@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../Footer/Footer';
 import styles from './VersionHistory.module.scss';
 
 const VersionHistory = () => {
@@ -7,6 +6,20 @@ const VersionHistory = () => {
         <div className={styles.versions}>
             <h1>Versions history:</h1>
             <div className={styles.list}>
+                <h3>3.2 :</h3>
+                <ul>
+                    <li>Design bugs fixed</li>
+                    <li>Minimize design</li>
+                    <li>Titles added</li>
+                    <li>Settings added</li>
+                    <li>Pop-up notifications added</li>
+                    <li>"What's new" window added</li>
+                    <li>"Float" renamed to "token"</li>
+                    <li>Tooltips added</li>
+                    <li>Input clear button added</li>
+                    <li>New technologies added</li>
+                    <li>Difference limit options added ("decimals" and "absolute")</li>
+                </ul>
                 <h3>3.1 :</h3>
                 <ul>
                     <li>Fixed fatal error with negative numbers</li>
@@ -50,7 +63,6 @@ const VersionHistory = () => {
                     <li>Version history added</li>
                 </ul>
             </div>
-            <Footer />
         </div>
     );
 };
