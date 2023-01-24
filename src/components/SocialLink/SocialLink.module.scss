@@ -1,13 +1,3 @@
-.filterLight {
-    filter: invert(30%) sepia(84%) saturate(1270%) hue-rotate(242deg) brightness(84%) contrast(78%);
-    transition: filter 1.5s;
-}
-
-.filterDark {
-    filter: invert(75%) sepia(58%) saturate(4161%) hue-rotate(214deg) brightness(102%) contrast(94%);
-    transition: filter 1.5s;
-}
-
 button {
     display: flex;
     border: 0px;
@@ -27,5 +17,18 @@ a {
     .tooltip {
         background-color: var(--alternative-color);
         color: var(--image-color);
+    }
+    .filterLight {
+        filter: invert(30%) sepia(84%) saturate(1270%) hue-rotate(242deg) brightness(84%)
+            contrast(78%);
+        transition: filter 1.5s;
+        border-radius: 0px;
+    }
+
+    .filterDark {
+        filter: invert(75%) sepia(58%) saturate(4161%) hue-rotate(214deg) brightness(102%)
+            contrast(94%);
+        transition: filter 1.5s;
+        border-radius: 0px;
     }
 }

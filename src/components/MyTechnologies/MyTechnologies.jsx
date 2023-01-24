@@ -30,6 +30,15 @@ import nextjs from '../../assets/nextjs.png';
 import postgresql from '../../assets/postgresql.svg';
 import postman from '../../assets/postman.svg';
 import webpack from '../../assets/webpack.svg';
+import Footer from '../Footer/Footer';
+import bootstrap from '../../assets/Bootstrap_logo.svg';
+import figma from '../../assets/figma.svg';
+import graphql from '../../assets/graphql.svg';
+import jest from '../../assets/jest-js-icon.svg';
+import materialui from '../../assets/materialui.png';
+import webstorm from '../../assets/webstorm.svg';
+import testinglibrary from '../../assets/testinglibrary.png';
+import typescript from '../../assets/typescript.png';
 
 const MyTechnologies = () => {
     return (
@@ -37,6 +46,44 @@ const MyTechnologies = () => {
             <div className={styles.grid}>
                 <div>
                     <h1>Technologies that I want to learn:</h1>
+                </div>
+                <div className={styles.rowOdd}>
+                    <div className={styles.item}>
+                        <img src={typescript} alt="" width={42} height={42} id="typescript" />
+                        <Tooltip
+                            content="TypeScript"
+                            anchorId="typescript"
+                            place="top"
+                            className={styles.tooltip}
+                        />
+                    </div>
+                    <div className={styles.item}>
+                        <img src={bootstrap} alt="" width={42} height={42} id="bootstrap" />
+                        <Tooltip
+                            content="Bootstrap"
+                            anchorId="bootstrap"
+                            place="top"
+                            className={styles.tooltip}
+                        />
+                    </div>
+                    <div className={styles.item}>
+                        <img src={graphql} alt="" width={42} height={42} id="graphql" />
+                        <Tooltip
+                            content="GraphQL"
+                            anchorId="graphql"
+                            place="top"
+                            className={styles.tooltip}
+                        />
+                    </div>
+                    <div className={styles.item}>
+                        <img src={jest} alt="" width={42} height={42} id="jest" />
+                        <Tooltip
+                            content="Jest"
+                            anchorId="jest"
+                            place="top"
+                            className={styles.tooltip}
+                        />
+                    </div>
                 </div>
                 <div className={styles.rowOdd}>
                     <div className={styles.item}>
@@ -308,6 +355,53 @@ const MyTechnologies = () => {
                             className={styles.tooltip}
                         />
                     </div>
+                </div>
+                <div className={styles.rowOdd}>
+                    <div className={styles.item}>
+                        <img src={figma} alt="" width={42} height={42} id="figma" />
+                        <Tooltip
+                            content="Figma"
+                            anchorId="figma"
+                            place="top"
+                            className={styles.tooltip}
+                        />
+                    </div>
+                    <div className={styles.item}>
+                        <img src={materialui} alt="" width={42} height={42} id="materialui" />
+                        <Tooltip
+                            content="Material UI"
+                            anchorId="materialui"
+                            place="top"
+                            className={styles.tooltip}
+                        />
+                    </div>
+                    <div className={styles.item}>
+                        <img src={webstorm} alt="" width={42} height={42} id="webstorm" />
+                        <Tooltip
+                            content="WebStorm"
+                            anchorId="webstorm"
+                            place="top"
+                            className={styles.tooltip}
+                        />
+                    </div>
+                    <div className={styles.item}>
+                        <img
+                            src={testinglibrary}
+                            alt=""
+                            width={42}
+                            height={42}
+                            id="testinglibrary"
+                        />
+                        <Tooltip
+                            content="React Testing Library"
+                            anchorId="testinglibrary"
+                            place="top"
+                            className={styles.tooltip}
+                        />
+                    </div>
+                </div>
+                <div className={styles.footer}>
+                    <Footer />
                 </div>
             </div>
         </div>

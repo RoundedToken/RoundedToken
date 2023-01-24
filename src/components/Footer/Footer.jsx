@@ -7,6 +7,7 @@ import hackerRank from '../../assets/hackerRank.svg';
 import SocialLink from '../SocialLink/SocialLink';
 import ImageButton from '../ImageButton/ImageButton';
 import copyFunction from '../../Functions/CopyFunction.js';
+import w3schools from '../../assets/w3logo.png';
 
 const Footer = () => {
     return (
@@ -57,6 +58,15 @@ const Footer = () => {
                     place="bottom"
                     src={hackerRank}
                     href={'https://www.hackerrank.com/RoundedToken?hr_r=1'}
+                    width={32}
+                    height={32}
+                />
+                <SocialLink
+                    id={'W3Schools'}
+                    content={'Go to W3Schools'}
+                    place="bottom"
+                    src={w3schools}
+                    href="https://www.w3profile.com/RoundedToken"
                     width={32}
                     height={32}
                 />

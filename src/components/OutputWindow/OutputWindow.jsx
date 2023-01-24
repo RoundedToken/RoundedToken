@@ -59,7 +59,7 @@ const OutputWindow = () => {
                                     <th>Difference</th>
                                     <th>Diff, %</th>
                                     <th>Price</th>
-                                    <th>Uint 128</th>
+                                    <th>Uint128</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -155,7 +155,7 @@ const OutputWindow = () => {
                                 <th>Difference</th>
                                 <th>Diff, %</th>
                                 <th>Price</th>
-                                <th>Uint 128</th>
+                                <th>Uint128</th>
                             </tr>
                         </thead>
                         <tbody>

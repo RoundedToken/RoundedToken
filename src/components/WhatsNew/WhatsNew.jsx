@@ -18,19 +18,12 @@ const WhatsNew = () => {
                 <img src={close} alt="close" width={32} height={32} />
             </button>
             <div className={styles.list}>
-                <h3>3.2 :</h3>
+                <h3>3.3 :</h3>
                 <ul>
-                    <li>Design bugs fixed</li>
-                    <li>Minimize design</li>
-                    <li>Titles added</li>
-                    <li>Settings added</li>
-                    <li>Pop-up notifications added</li>
-                    <li>"What's new" window added</li>
-                    <li>"Float" renamed to "token"</li>
-                    <li>Tooltips added</li>
-                    <li>Input clear button added</li>
+                    <li>Fixed lexicographical mistakes</li>
                     <li>New technologies added</li>
-                    <li>Difference limit options added ("decimals" and "absolute")</li>
+                    <li>Minor bugs fixed</li>
+                    <li>W3Schools profile added</li>
                 </ul>
             </div>
         </div>

@@ -6,6 +6,13 @@ const VersionHistory = () => {
         <div className={styles.versions}>
             <h1>Versions history:</h1>
             <div className={styles.list}>
+                <h3>3.3 :</h3>
+                <ul>
+                    <li>Fixed lexicographical mistakes</li>
+                    <li>New technologies added</li>
+                    <li>Minor bugs fixed</li>
+                    <li>W3Schools profile added</li>
+                </ul>
                 <h3>3.2 :</h3>
                 <ul>
                     <li>Design bugs fixed</li>
