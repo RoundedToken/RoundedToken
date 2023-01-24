@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/RoundedToken/static/css/main.87fca51d.css",
-    "main.js": "/RoundedToken/static/js/main.c4a51a3d.js",
+    "main.css": "/RoundedToken/static/css/main.d2730650.css",
+    "main.js": "/RoundedToken/static/js/main.d2b0bec0.js",
     "static/media/insomnia.png": "/RoundedToken/static/media/insomnia.4657d201f8ef1c6564f5.png",
+    "static/media/testinglibrary.png": "/RoundedToken/static/media/testinglibrary.506ffeb2f7209859c850.png",
     "static/media/babel.svg": "/RoundedToken/static/media/babel.71f0384e46057b70e9275750d71e34e3.svg",
     "static/media/css-modules.png": "/RoundedToken/static/media/css-modules.4aabd776fc578dc30128.png",
     "static/media/jwt.png": "/RoundedToken/static/media/jwt.c07e9ababdbb78031d34.png",
+    "static/media/materialui.png": "/RoundedToken/static/media/materialui.5b2d8a0a309d9f7d47c1.png",
     "static/media/mongodb.svg": "/RoundedToken/static/media/mongodb.d5a9f33e37cd72ecff0d61eea1650d1e.svg",
+    "static/media/typescript.png": "/RoundedToken/static/media/typescript.af108db04a54d784da9b.png",
     "static/media/nestjs.png": "/RoundedToken/static/media/nestjs.7868f51570b0c0c71ae4.png",
     "static/media/postgresql.svg": "/RoundedToken/static/media/postgresql.1c4538eb6f5ba541ec0c1dcb36dc7a78.svg",
     "static/media/prettier.svg": "/RoundedToken/static/media/prettier.7109cf6b693b9fc89dda2e9a5a5c9835.svg",
@@ -15,12 +18,16 @@
     "static/media/react.svg": "/RoundedToken/static/media/react.1520bd67b9711ed91ace46b169bc2491.svg",
     "static/media/question.svg": "/RoundedToken/static/media/question.7ccd8372bd07bc821b9b2fd784091f46.svg",
     "static/media/jsx.svg": "/RoundedToken/static/media/jsx.543724f36157128ea005f34d24517301.svg",
+    "static/media/Bootstrap_logo.svg": "/RoundedToken/static/media/Bootstrap_logo.3a162f65200426203695ee878e6b62fb.svg",
     "static/media/react-router.svg": "/RoundedToken/static/media/react-router.7f2e263f483c9280a8bd0af2e3c6a4a7.svg",
     "static/media/redux.svg": "/RoundedToken/static/media/redux.954b3f427d28b3746c04a3f317fcdcde.svg",
+    "static/media/webstorm.svg": "/RoundedToken/static/media/webstorm.3c8f7944edc74587ae7c561c001cf28a.svg",
     "static/media/postman.svg": "/RoundedToken/static/media/postman.b7c39e5d8866e0523590e8023fce898a.svg",
+    "static/media/jest-js-icon.svg": "/RoundedToken/static/media/jest-js-icon.52555cbaeacbbffc7a74b1b8fe27456a.svg",
     "static/media/node-js.svg": "/RoundedToken/static/media/node-js.7ca28bcc5b19ce40dfc23043cfb31f27.svg",
     "static/media/email.svg": "/RoundedToken/static/media/email.94e13d60b17ce0834b6a5505e78d6e98.svg",
     "static/media/settings.svg": "/RoundedToken/static/media/settings.20c3a41e5acd6c59e052b1ed2b27836b.svg",
+    "static/media/graphql.svg": "/RoundedToken/static/media/graphql.19ff914772591666538f7ea3a416a9a6.svg",
     "static/media/hackerRank.svg": "/RoundedToken/static/media/hackerRank.50d8ee0d9ba9a88260e0f0f1505d4338.svg",
     "static/media/express.svg": "/RoundedToken/static/media/express.17d6aefdd7235ab2cf8881c1b03ad312.svg",
     "static/media/github.svg": "/RoundedToken/static/media/github.95ad9234e1509d5c93ffe0a9f7eb217a.svg",
@@ -34,6 +41,7 @@
     "static/media/eslint.svg": "/RoundedToken/static/media/eslint.69b43a917d18793aa3c22962e9f400fd.svg",
     "static/media/javascript.svg": "/RoundedToken/static/media/javascript.218515feb76f692771fe00cfeadc46c8.svg",
     "static/media/webpack.svg": "/RoundedToken/static/media/webpack.7340ce295f8804bd0f14bae75700ebf3.svg",
+    "static/media/figma.svg": "/RoundedToken/static/media/figma.6370ba624eb309fa8f764c8d01374027.svg",
     "static/media/dotenv.svg": "/RoundedToken/static/media/dotenv.ac5a0526f5536a3100b27f24c5d7d367.svg",
     "static/media/html.svg": "/RoundedToken/static/media/html.6e7b1b463015c056aeb9a624c8dc2876.svg",
     "static/media/npm.svg": "/RoundedToken/static/media/npm.0bdcc5bd9f907afad50533ddcab48fe9.svg",
@@ -41,11 +49,11 @@
     "static/media/plus.svg": "/RoundedToken/static/media/plus.1177e6ac987d0ad856284c68f4484240.svg",
     "static/media/minus.svg": "/RoundedToken/static/media/minus.d1e28aed1968b6853a15f5cdd5d7279e.svg",
     "static/media/logo.svg": "/RoundedToken/static/media/logo.5dffb9b256c66db96da028d517763e30.svg",
-    "main.87fca51d.css.map": "/RoundedToken/static/css/main.87fca51d.css.map",
-    "main.c4a51a3d.js.map": "/RoundedToken/static/js/main.c4a51a3d.js.map"
+    "main.d2730650.css.map": "/RoundedToken/static/css/main.d2730650.css.map",
+    "main.d2b0bec0.js.map": "/RoundedToken/static/js/main.d2b0bec0.js.map"
   },
   "entrypoints": [
-    "static/css/main.87fca51d.css",
-    "static/js/main.c4a51a3d.js"
+    "static/css/main.d2730650.css",
+    "static/js/main.d2b0bec0.js"
   ]
 }
