@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/RoundedToken/static/css/main.5da294a6.css",
-    "main.js": "/RoundedToken/static/js/main.f7f722a8.js",
+    "main.js": "/RoundedToken/static/js/main.8127fc17.js",
     "static/media/insomnia.png": "/RoundedToken/static/media/insomnia.4657d201f8ef1c6564f5.png",
     "static/media/testinglibrary.png": "/RoundedToken/static/media/testinglibrary.506ffeb2f7209859c850.png",
     "static/media/mongoose.png": "/RoundedToken/static/media/mongoose.d1e73d9c472680150b28.png",
@@ -60,10 +60,10 @@
     "static/media/minus.svg": "/RoundedToken/static/media/minus.d1e28aed1968b6853a15f5cdd5d7279e.svg",
     "static/media/logo.svg": "/RoundedToken/static/media/logo.5dffb9b256c66db96da028d517763e30.svg",
     "main.5da294a6.css.map": "/RoundedToken/static/css/main.5da294a6.css.map",
-    "main.f7f722a8.js.map": "/RoundedToken/static/js/main.f7f722a8.js.map"
+    "main.8127fc17.js.map": "/RoundedToken/static/js/main.8127fc17.js.map"
   },
   "entrypoints": [
     "static/css/main.5da294a6.css",
-    "static/js/main.f7f722a8.js"
+    "static/js/main.8127fc17.js"
   ]
 }
