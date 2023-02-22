@@ -18,6 +18,7 @@ const SocialLink = ({ src, width, height, href, id, content, place }) => {
                     alt=""
                 />
             </a>
+
             <Tooltip className={styles.tooltip} anchorId={id} content={content} place={place} />
         </div>
     );

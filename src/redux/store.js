@@ -2,15 +2,19 @@ import { configureStore } from '@reduxjs/toolkit';
 import theme from './themeSlice';
 import input from './inputSlice';
 import settings from './settingsSlice';
-import page from './pageSlice';
 import update from './updateSlice';
+import auth from './authSlice';
+import page from './pageSlice';
+import language from './languageSlice';
 
 export const store = configureStore({
     reducer: {
         theme,
         input,
         settings,
-        page,
         update,
+        page,
+        auth,
+        language,
     },
 });

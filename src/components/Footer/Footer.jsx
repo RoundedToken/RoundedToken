@@ -8,14 +8,17 @@ import SocialLink from '../SocialLink/SocialLink';
 import ImageButton from '../ImageButton/ImageButton';
 import copyFunction from '../../Functions/CopyFunction.js';
 import w3schools from '../../assets/w3logo.png';
+import Text from '../Text/Text';
 
 const Footer = () => {
     return (
         <div className={styles.footer}>
             <div className={styles.container}>
-                <h5>Write for suggestions</h5>
+                <h5>
+                    <Text eng={'Write for suggestions'} rus={'Связаться со мной'} />
+                </h5>
                 <h5 id="email" style={{ fontStyle: 'italic' }}>
-                    stepan.zip.07@gmail.com
+                    roundedtoken@gmail.com
                 </h5>
                 <ImageButton
                     f={copyFunction}
@@ -24,16 +27,21 @@ const Footer = () => {
                     src={email}
                     width={32}
                     height={32}
-                    content={'Copy email'}
+                    content={<Text eng={'Copy email'} rus="Скопировать email" />}
                     place={'right'}
                 />
             </div>
 
             <div className={styles.container}>
-                <h5>If you like program, give it a star on GitHub!</h5>
+                <h5>
+                    <Text
+                        eng={'If you like the app, give it a star on GitHub!'}
+                        rus="Если Вам понравилось приложение, поставьте звезду на GitHub!"
+                    />
+                </h5>
                 <SocialLink
                     id={'gitHub'}
-                    content={'Go to GitHub'}
+                    content={<Text eng={'Go to GitHub'} rus="Перейти на GitHub" />}
                     place={'right'}
                     src={github}
                     href={'https://github.com/RoundedToken/RoundedToken'}
@@ -42,10 +50,12 @@ const Footer = () => {
                 />
             </div>
             <div className={styles.container}>
-                <h5>Check up my profiles</h5>
+                <h5>
+                    <Text eng={'Check up my profiles'} rus="Мои профили" />
+                </h5>
                 <SocialLink
                     id={'codeWars'}
-                    content={'Go to CodeWars'}
+                    content={<Text eng={'Go to CodeWars'} rus="Перейти на CodeWars" />}
                     place={'bottom'}
                     src={codeWars}
                     href={'https://www.codeWars.com/users/RoundedToken'}
@@ -54,7 +64,7 @@ const Footer = () => {
                 />
                 <SocialLink
                     id={'hackerRank'}
-                    content={'Go to HackerRank'}
+                    content={<Text eng={'Go to HackerRank'} rus="Перейти на HackerRank" />}
                     place="bottom"
                     src={hackerRank}
                     href={'https://www.hackerrank.com/RoundedToken?hr_r=1'}
@@ -63,7 +73,7 @@ const Footer = () => {
                 />
                 <SocialLink
                     id={'W3Schools'}
-                    content={'Go to W3Schools'}
+                    content={<Text eng={'Go to W3Schools'} rus="Перейти на W3Schools" />}
                     place="bottom"
                     src={w3schools}
                     href="https://www.w3profile.com/RoundedToken"

@@ -8,19 +8,28 @@ import PercentRadio from '../PercentRadio/PercentRadio';
 import styles from './SettingsComponent.module.scss';
 import closeIcon from '../../assets/close.svg';
 import { toast } from 'react-toastify';
+import Text from '../Text/Text';
 
 const SettingsComponent = () => {
     const dispatch = useDispatch();
+    const lang = useSelector((state) => state.language.lang);
     const close = useSelector((state) => state.settings.close);
     const custom = useSelector((state) => state.input.custom);
     const limitOptions = useSelector((state) => state.input.limitOptions);
     const absoluteLimit = useSelector((state) => state.input.absoluteLimit);
     const inputRef = useRef();
 
+    const check = (str) => {
+        if (str === '') return true;
+        if (str.length > 25) return false;
+        if (str.length > 1 && str === '00') return false;
+        return /^([0-9]+([.][0-9]*)?|[.][0-9]+)$/.test(str) ? true : false;
+    };
+
     const clearAbsoluteLimit = () => {
         dispatch(setAbsoluteLimit(''));
         inputRef.current.focus();
-        toast.success('Cleared!');
+        toast.success(lang === 'eng' ? 'Cleared!' : 'Очищено!');
     };
 
     return (
@@ -28,7 +37,9 @@ const SettingsComponent = () => {
             {!close && (
                 <>
                     <div className={styles.vertical}>
-                        <h5>Decimals</h5>
+                        <h5>
+                            <Text eng={'Decimals count'} rus="Кол-во десятичных" />
+                        </h5>
                         <div className={styles.decimals}>
                             <DecimalsRadio id={1} value={'6'} />
                             <DecimalsRadio id={2} value={'8'} />
@@ -37,33 +48,50 @@ const SettingsComponent = () => {
                     </div>
                     <div className={styles.vertical}>
                         <LimitOptions />
-                        {limitOptions === '%' && (
+                        {(limitOptions === 'in %' || limitOptions === 'в %') && (
                             <div className={styles.percents}>
                                 <PercentRadio id={4} value={'0.05'} />
                                 <PercentRadio id={5} value={'0.1'} />
                                 <PercentRadio id={6} value={'0.5'} />
                                 <PercentRadio id={7} value={'1'} />
-                                <PercentRadio id={8} value={custom} />
+                                <PercentRadio id={8} value={custom} width={75} />
                                 <input
-                                    placeholder="Custom"
-                                    type={'number'}
+                                    placeholder={lang === 'eng' ? 'Custom' : 'Настроить'}
+                                    type={'text'}
                                     value={custom}
-                                    onChange={(e) => dispatch(setCustom(e.target.value))}
+                                    onChange={(e) =>
+                                        check(e.target.value)
+                                            ? dispatch(setCustom(e.target.value))
+                                            : dispatch(setCustom(custom))
+                                    }
                                 />
                             </div>
                         )}
-                        {limitOptions === 'decimals' && <DecimalsLimit />}
-                        {limitOptions === 'absolute' && (
+                        {(limitOptions === 'by decimals' || limitOptions === 'по десятичным') && (
+                            <DecimalsLimit />
+                        )}
+                        {(limitOptions === 'absolute' || limitOptions === 'абсолютный') && (
                             <div className={styles.input}>
                                 <input
-                                    placeholder="Custom absolute limit"
+                                    placeholder={
+                                        lang === 'eng'
+                                            ? 'Custom absolute limit'
+                                            : 'Настроить абсолютный предел'
+                                    }
                                     ref={inputRef}
-                                    type={'number'}
+                                    type={'text'}
                                     value={absoluteLimit}
-                                    onChange={(e) => dispatch(setAbsoluteLimit(e.target.value))}
+                                    onChange={(e) =>
+                                        check(e.target.value)
+                                            ? dispatch(setAbsoluteLimit(e.target.value))
+                                            : dispatch(setAbsoluteLimit(absoluteLimit))
+                                    }
                                 />
                                 {absoluteLimit !== '' && (
-                                    <button onClick={clearAbsoluteLimit} title="Clear">
+                                    <button
+                                        onClick={clearAbsoluteLimit}
+                                        title={lang === 'eng' ? 'Clear' : 'Очистить'}
+                                    >
                                         <img src={closeIcon} alt="close" width={16} height={16} />
                                     </button>
                                 )}

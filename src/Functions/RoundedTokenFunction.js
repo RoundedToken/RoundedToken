@@ -45,11 +45,13 @@ function main(float, dec, limit, mode) {
     };
 
     const convert10To16 = (num) => BigInt(num).toString(16);
+
     const convert16To10 = (str, l, flag) => {
         let x = BigInt('0X' + str).toString();
         if (x.length < l && flag) x = x.padStart(l, '0');
         return x;
     };
+
     const toFloat = (str, l) => str.slice(0, str.length - l) + '.' + str.slice(str.length - l);
 
     function bestPrice(integers, decimals, limit) {
@@ -63,6 +65,7 @@ function main(float, dec, limit, mode) {
             for (let i = l - 1; i > 0; i--) {
                 let arr = Array.from(Arr);
                 let index = 1;
+
                 if (arr[i] === '00') {
                     if (arr[i - index] === 'ff') {
                         Arr[i] = '00';
@@ -74,14 +77,17 @@ function main(float, dec, limit, mode) {
                 } else {
                     arr[i] = '00';
                     low16.push(arr.join(''));
+
                     if (arr[i - index] === 'ff') {
                         Arr[i] = '00';
                         continue;
                     }
+
                     arr[i - index] = (parseInt(arr[i - index], 16) + 1).toString(16);
                     if (arr[i - index].length === 1) arr[i - index] = '0' + arr[i - index];
                     up16.push(arr.join(''));
                 }
+
                 Arr[i] = '00';
             }
         }
@@ -95,12 +101,15 @@ function main(float, dec, limit, mode) {
         let numberPrice = price(numberStr16);
         let low16 = [];
         let up16 = [];
+
         lowerAndUpper(numberStr16);
+
         let lowPrice = [];
         for (let i of low16) lowPrice.push(price(i));
 
         let upPrice = [];
         let newUp16 = [];
+
         for (let i of up16) {
             let p = price(i);
             if (p < numberPrice) {
@@ -142,7 +151,8 @@ function main(float, dec, limit, mode) {
         let uppestIndex;
         let lowest;
         let lowestIndex;
-        if (mode === '%') {
+
+        if (mode === 'in %' || mode === 'в %') {
             const lim = limit === '' ? Number.MAX_VALUE : Number(limit);
 
             for (let i = upDiff.length - 1; i >= 0; i--) {
@@ -171,13 +181,14 @@ function main(float, dec, limit, mode) {
                     uppestIndex = 0;
                 } else uppest = numberFloat;
             }
+
             if (lowest === undefined) {
                 if (lowFloat.length > 0 && lowDiff[lowFloat.length - 1][0] < lim) {
                     lowest = lowFloat[lowFloat.length - 1];
                     lowestIndex = lowFloat.length - 1;
                 } else lowest = numberFloat;
             }
-        } else if (mode === 'decimals') {
+        } else if (mode === 'by decimals' || mode === 'по десятичным') {
             const lim = BigInt(''.padStart(Number(limit), '9'));
 
             for (let i = upDiff.length - 1; i >= 0; i--) {
@@ -209,6 +220,7 @@ function main(float, dec, limit, mode) {
                     uppestIndex = 0;
                 } else uppest = numberFloat;
             }
+
             if (lowest === undefined) {
                 if (
                     lowFloat.length > 0 &&
@@ -260,6 +272,7 @@ function main(float, dec, limit, mode) {
                     uppestIndex = 0;
                 } else uppest = numberFloat;
             }
+
             if (lowest === undefined) {
                 if (
                     lowFloat.length > 0 &&
@@ -289,7 +302,9 @@ function main(float, dec, limit, mode) {
             numberStr16,
         };
     }
+
     const output = bestPrice(integers, decimals, limit, mode);
+
     return output;
 }
 

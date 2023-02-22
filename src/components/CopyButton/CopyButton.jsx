@@ -6,16 +6,21 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const CopyButton = ({ id }) => {
+    const lang = useSelector((state) => state.language.lang);
     const theme = useSelector((state) => state.theme.color);
     function copyEvent(id) {
         var str = document.getElementById(id);
         window.getSelection().selectAllChildren(str);
         document.execCommand('Copy');
-        toast.success('Copied!');
+        toast.success(lang === 'eng' ? 'Copied!' : 'Скопировано!');
     }
 
     return (
-        <button className={styles.copyButton} onClick={() => copyEvent(id)}>
+        <button
+            title={lang === 'eng' ? 'Copy!' : 'Скопировать!'}
+            className={styles.copyButton}
+            onClick={() => copyEvent(id)}
+        >
             <img
                 alt="copy"
                 src={copy}

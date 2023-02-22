@@ -4,6 +4,7 @@ body,
 .App {
     height: 100%;
 }
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -25,19 +26,16 @@ body {
     }
 }
 
+h2 {
+    transition: color 1.5s;
+}
+
 .App {
     display: flex;
     flex-direction: column;
     color: var(--text-color);
-    transition: color 1.5s;
     background-color: var(--second-color);
-    transition: background-color 1.5s;
-}
-
-.anchor {
-    background-color: var(--second-color);
-    transition: background-color 1.5s;
-    height: 85px;
+    transition: background-color 1.5s, color 1.5s;
 }
 
 #light {

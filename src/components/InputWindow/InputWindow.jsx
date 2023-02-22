@@ -8,16 +8,20 @@ import { toast } from 'react-toastify';
 
 const InputWindow = () => {
     const dispatch = useDispatch();
+    const lang = useSelector((state) => state.language.lang);
     const float = useSelector((state) => state.input.float);
     const inputRef = useRef();
 
     const check = (str) => {
-        return str.includes('-') ? false : true;
+        if (str === '') return true;
+        if (str.length > 45) return false;
+        if (str.length > 1 && str === '00') return false;
+        return /^([0-9]+([.][0-9]*)?|[.][0-9]+)$/.test(str) ? true : false;
     };
     const clearFloat = () => {
         dispatch(setFloat(''));
         inputRef.current.focus();
-        toast.success('Cleared!');
+        toast.success(lang === 'eng' ? 'Cleared!' : 'Очищено!');
     };
 
     return (
@@ -26,17 +30,17 @@ const InputWindow = () => {
                 <div className={styles.input}>
                     <input
                         ref={inputRef}
-                        placeholder="Token"
-                        type={'number'}
+                        placeholder={lang === 'eng' ? 'Token' : 'Токен'}
+                        type={'text'}
                         value={float}
                         onChange={(e) => {
-                            check(e.target.value) === true
+                            check(e.target.value)
                                 ? dispatch(setFloat(e.target.value))
-                                : dispatch(setFloat(''));
+                                : dispatch(setFloat(float));
                         }}
                     />
                     {float !== '' && (
-                        <button onClick={clearFloat} title="Clear">
+                        <button onClick={clearFloat} title={lang === 'eng' ? 'Clear' : 'Очистить'}>
                             <img src={close} alt="close" width={16} height={16} />
                         </button>
                     )}

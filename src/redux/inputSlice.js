@@ -7,7 +7,7 @@ const initialState = {
     float: localStorage.float === undefined ? '' : localStorage.float,
     tableMode: localStorage.tableMode === undefined ? false : localStorage.tableMode === 'true',
     custom: localStorage.custom === undefined ? '' : localStorage.custom,
-    limitOptions: localStorage.limitOptions === undefined ? '%' : localStorage.limitOptions,
+    limitOptions: localStorage.limitOptions === undefined ? 'in %' : localStorage.limitOptions,
     absoluteLimit: localStorage.absoluteLimit === undefined ? '' : localStorage.absoluteLimit,
 };
 

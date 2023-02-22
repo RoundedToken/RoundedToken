@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    status: localStorage.version === 'v.3.3' ? false : true,
+    status: localStorage.version === 'v.4.0' ? false : true,
     version: localStorage.version === undefined ? '' : localStorage.version,
 };
 
@@ -12,7 +12,7 @@ export const updateSlice = createSlice({
         closeUpdate(state) {
             state.status = false;
             localStorage.update = state.status;
-            localStorage.version = 'v.3.3';
+            localStorage.version = 'v.4.0';
         },
     },
 });

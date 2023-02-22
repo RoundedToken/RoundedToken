@@ -7,11 +7,15 @@ import styles from './ProgramName.module.scss';
 
 const ProgramName = () => {
     const dispatch = useDispatch();
+    const lang = useSelector((state) => state.language.lang);
     const theme = useSelector((state) => state.theme.color);
 
     return (
-        <div className={styles.programName} title="Go to main page">
-            <Link to="/" onClick={() => dispatch(setPage('program'))}>
+        <div
+            className={styles.programName}
+            title={lang === 'eng' ? 'Go to main page' : 'Перейти на главную страницу'}
+        >
+            <Link to="/" onClick={() => dispatch(setPage(''))}>
                 <div className={styles.logoCont}>
                     <h1>R</h1>
                     <div className={styles.logo}>

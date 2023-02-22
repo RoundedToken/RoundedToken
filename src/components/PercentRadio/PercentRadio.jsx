@@ -4,7 +4,7 @@ import styles from './PercentRadio.module.scss';
 import { setPercents } from '../../redux/inputSlice.js';
 import sliders from '../../assets/sliders.svg';
 
-const PercentRadio = ({ id, value, children }) => {
+const PercentRadio = ({ id, value, children, width }) => {
     const dispatch = useDispatch();
     const percents = useSelector((state) => state.input.percents);
     const theme = useSelector((state) => state.theme.color);
@@ -21,7 +21,7 @@ const PercentRadio = ({ id, value, children }) => {
                 }}
                 checked={percents === value ? true : false}
             />
-            <label htmlFor={id} className={styles.label}>
+            <label htmlFor={id} className={styles.label} style={{ width: width }}>
                 {value === '' ? (
                     <img
                         width={24}

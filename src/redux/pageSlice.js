@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    page: localStorage.page === undefined ? 'program' : localStorage.page,
+    page: localStorage.page ? localStorage.page : '',
 };
 
 export const pageSlice = createSlice({
@@ -9,7 +9,7 @@ export const pageSlice = createSlice({
     initialState,
     reducers: {
         setPage(state, action) {
-            state.page = action.payload
+            state.page = action.payload;
             localStorage.page = state.page;
         },
     },

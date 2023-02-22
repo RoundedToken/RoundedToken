@@ -45,7 +45,7 @@
         appearance: none;
         background: transparent;
         cursor: pointer;
-        width: 261.71px;
+        width: 288.71px; /* width control */
     }
 
     /* Removes default focus */
@@ -59,6 +59,7 @@
         background-color: var(--image-color);
         border-radius: 0.5rem;
         height: 0.5rem;
+        transition: 1.5s;
     }
 
     /* slider thumb */
@@ -70,6 +71,7 @@
         border-radius: 2px;
         height: 20px;
         width: 5px;
+        transition: 1.5s;
     }
 
     /*********** Firefox styles ***********/

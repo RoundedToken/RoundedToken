@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Tooltip } from 'react-tooltip';
 import copyFunction from '../../Functions/CopyFunction';
 import maxApproveF from '../../Functions/MaxApproveFunction';
+import Text from '../Text/Text';
 import styles from './MaxApprove.module.scss';
 
 const MaxApprove = () => {
@@ -18,7 +19,7 @@ const MaxApprove = () => {
                 <h5>M.A</h5>
             </button>
             <Tooltip
-                content="Copy max approve"
+                content={<Text eng={'Copy max approve'} rus="Скопировать max approve" />}
                 place="top"
                 anchorId="maxApproveId"
                 className={styles.tooltip}

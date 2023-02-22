@@ -5,11 +5,12 @@ import styles from './ImageButton.module.scss';
 import 'react-tooltip/dist/react-tooltip.css';
 
 const ImageButton = ({ f, src, width, height, id, content, place, tooltipId }) => {
+    const lang = useSelector((state) => state.language.lang);
     const theme = useSelector((state) => state.theme.color);
 
     return (
         <div className={styles.imageButton}>
-            <button onClick={() => f(`${id}`)} id={tooltipId}>
+            <button onClick={() => f(`${id}`, lang)} id={tooltipId}>
                 <img
                     className={theme === 'dark' ? styles.filterDark : styles.filterLight}
                     src={src}

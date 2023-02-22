@@ -1,15 +1,20 @@
 .header {
+    position: fixed;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 1.5s;
     background-color: var(--first-color);
     margin-bottom: 20px;
+    z-index: 1;
+
     a {
         color: var(--image-color);
         transition: color 1.5s;
         height: min-content;
         text-decoration: none;
+        width: max-content;
     }
     h1 {
         margin: 0px;
@@ -25,4 +30,34 @@
         color: var(--text-color);
         transition: color 1.5s;
     }
+
+    .logOut {
+        align-self: center;
+        border: 2px solid var(--text-color);
+        border-radius: 5px;
+        font-size: 24px;
+        padding: 5px;
+        color: var(--text-color);
+    }
+    .tooltip {
+        background-color: var(--alternative-color);
+    }
+}
+
+.rightBlock {
+    position: absolute;
+    right: 25px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    filter: invert(53%) sepia(63%) saturate(2499%) hue-rotate(323deg) brightness(100%)
+        contrast(103%);
+}
+
+.green {
+    filter: invert(53%) sepia(49%) saturate(2830%) hue-rotate(102deg) brightness(99%) contrast(80%);
 }

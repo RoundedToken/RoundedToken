@@ -4,6 +4,7 @@ import question from '../../assets/question.svg';
 import { useSelector } from 'react-redux';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
+import Text from '../Text/Text';
 
 const TableInfo = () => {
     const theme = useSelector((state) => state.theme.color);
@@ -18,9 +19,14 @@ const TableInfo = () => {
                 height={16}
                 className={theme === 'dark' ? styles.filterDark : styles.filterLight}
             />
+
             <Tooltip anchorId="tableInfo" place="top" className={styles.tooltip}>
-                <h5 style={{ color: 'rgb(255,95,94)' }}>* Original</h5>
-                <h5 style={{ color: 'rgb(25,184,76)' }}>* Cheapest</h5>
+                <h5 style={{ color: 'rgb(255,95,94)' }}>
+                    <Text eng={'* Original'} rus="* Оригинальный" />
+                </h5>
+                <h5 style={{ color: 'rgb(25,184,76)' }}>
+                    <Text eng={'* Cheapest'} rus="* Самый дешевый" />
+                </h5>
             </Tooltip>
         </div>
     );

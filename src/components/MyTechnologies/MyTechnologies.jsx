@@ -17,7 +17,6 @@ import sass from '../../assets/sass.svg';
 import redux from '../../assets/redux.svg';
 import react from '../../assets/react.svg';
 import css from '../../assets/css3.svg';
-import { Tooltip } from 'react-tooltip';
 import axios from '../../assets/axios.png';
 import eslint from '../../assets/eslint.svg';
 import dotenv from '../../assets/dotenv.svg';
@@ -39,366 +38,113 @@ import materialui from '../../assets/materialui.png';
 import webstorm from '../../assets/webstorm.svg';
 import testinglibrary from '../../assets/testinglibrary.png';
 import typescript from '../../assets/typescript.png';
+import angular from '../../assets/angular.png';
+import electron from '../../assets/electron.png';
+import esbuild from '../../assets/esbuild.svg';
+import yarn from '../../assets/yarn.png';
+import vue from '../../assets/vue.png';
+import svelt from '../../assets/svelt.png';
+import styledComponents from '../../assets/styled-components.png';
+import solidity from '../../assets/solidity.png';
+import nodemon from '../../assets/nodemon.png';
+import nodemailer from '../../assets/nodemailer.png';
+import expressValidator from '../../assets/express-validator.svg';
+import flutter from '../../assets/flutter.jpg';
+import json from '../../assets/json.svg';
+import mongoose from '../../assets/mongoose.png';
+import TechnologyItem from '../TechnologyItem/TechnologyItem';
+import transparent from '../../assets/transparent.png';
+import Text from '../Text/Text';
 
 const MyTechnologies = () => {
     return (
         <div className={styles.technologies}>
             <div className={styles.grid}>
                 <div>
-                    <h1>Technologies that I want to learn:</h1>
+                    <h1>
+                        <Text eng="My roadmap" rus="Мой план обучения" />
+                    </h1>
                 </div>
                 <div className={styles.rowOdd}>
-                    <div className={styles.item}>
-                        <img src={typescript} alt="" width={42} height={42} id="typescript" />
-                        <Tooltip
-                            content="TypeScript"
-                            anchorId="typescript"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={bootstrap} alt="" width={42} height={42} id="bootstrap" />
-                        <Tooltip
-                            content="Bootstrap"
-                            anchorId="bootstrap"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={graphql} alt="" width={42} height={42} id="graphql" />
-                        <Tooltip
-                            content="GraphQL"
-                            anchorId="graphql"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={jest} alt="" width={42} height={42} id="jest" />
-                        <Tooltip
-                            content="Jest"
-                            anchorId="jest"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
+                    <TechnologyItem src={mongoose} id="Mongoose" used={true} />
+                    <TechnologyItem src={typescript} id="TypeScript" used={false} />
+                    <TechnologyItem src={bootstrap} id="Bootstrap" used={false} />
+                    <TechnologyItem src={graphql} id="GraphQL" used={false} />
+                    <TechnologyItem src={jest} id="Jest" used={false} />
+                    <TechnologyItem src={json} id="JSON" used={true} />
                 </div>
                 <div className={styles.rowOdd}>
-                    <div className={styles.item}>
-                        <img src={dotenv} alt="" width={42} height={42} id="dotenv" />
-                        <Tooltip
-                            content="Dotenv"
-                            anchorId="dotenv"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={cssModules} alt="" width={42} height={42} id="cssModules" />
-                        <Tooltip
-                            content="CSS Modules"
-                            anchorId="cssModules"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={css} alt="" width={42} height={42} id="css" />
-                        <Tooltip
-                            content="CSS"
-                            anchorId="css"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={reactRouter} alt="" width={42} height={42} id="reactRouter" />
-                        <Tooltip
-                            content="React Router"
-                            anchorId="reactRouter"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={postman} alt="" width={42} height={42} id="postman" />
-                        <Tooltip
-                            content="Postman"
-                            anchorId="postman"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
+                    <TechnologyItem src={flutter} id="Flutter" used={false} />
+                    <TechnologyItem src={dotenv} id="Dotenv" used={true} />
+                    <TechnologyItem src={cssModules} id="CSS Modules" used={true} />
+                    <TechnologyItem src={css} id="CSS" used={true} />
+                    <TechnologyItem src={reactRouter} id="React Router" used={true} />
+                    <TechnologyItem src={postman} id="Postman" used={false} />
+                    <TechnologyItem src={nodemailer} id="Nodemailer" used={true} />
                 </div>
                 <div className={styles.rowEven}>
-                    <div className={styles.item}>
-                        <img src={insomnia} alt="" width={42} height={42} id="insomnia" />
-                        <Tooltip
-                            content="Insomnia"
-                            anchorId="insomnia"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={redux} alt="" width={42} height={42} id="redux" />
-                        <Tooltip
-                            content="Redux Toolkit"
-                            anchorId="redux"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={react} alt="" width={42} height={42} id="react" />
-                        <Tooltip
-                            content="React"
-                            anchorId="react"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={sass} alt="" width={42} height={42} id="sass" />
-                        <Tooltip
-                            content="Sass"
-                            anchorId="sass"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={es6} alt="" width={42} height={42} id="es6" />
-                        <Tooltip
-                            content="ECMAScript 6"
-                            anchorId="es6"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={postgresql} alt="" width={42} height={42} id="postgresql" />
-                        <Tooltip
-                            content="PostgreSQL"
-                            anchorId="postgresql"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
+                    <TechnologyItem src={expressValidator} id="express-validator" used={true} />
+                    <TechnologyItem src={insomnia} id="Insomnia" used={true} />
+                    <TechnologyItem src={redux} id="Redux Toolkit" used={true} />
+                    <TechnologyItem src={react} id="React" used={true} />
+                    <TechnologyItem src={sass} id="Sass" used={true} />
+                    <TechnologyItem src={es6} id="ECMAScript 6" used={true} />
+                    <TechnologyItem src={postgresql} id="PostgreSQL" used={false} />
+                    <TechnologyItem src={nodemon} id="nodemon" used={true} />
                 </div>
                 <div className={styles.rowOdd}>
-                    <div className={styles.item}>
-                        <img src={mongodb} alt="" width={42} height={42} id="mongodb" />
-                        <Tooltip
-                            content="MongoDB"
-                            anchorId="mongodb"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={eslint} alt="" width={42} height={42} id="eslint" />
-                        <Tooltip
-                            content="ESLint"
-                            anchorId="eslint"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={html} alt="" width={42} height={42} id="html" />
-                        <Tooltip
-                            content="HTML5"
-                            anchorId="html"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={nodeJs} alt="" width={42} height={42} id="nodeJs" />
-                        <Tooltip
-                            content="Node.js"
-                            anchorId="nodeJs"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={javaScript} alt="" width={42} height={42} id="javaScript" />
-                        <Tooltip
-                            content="JavaScript"
-                            anchorId="javaScript"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={axios} alt="" width={42} height={42} id="axios" />
-                        <Tooltip
-                            content="Axios"
-                            anchorId="axios"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={express} alt="" width={42} height={42} id="express" />
-                        <Tooltip
-                            content="Express"
-                            anchorId="express"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
+                    <TechnologyItem src={solidity} id="Solidity" used={false} />
+                    <TechnologyItem src={mongodb} id="MongoDB" used={true} />
+                    <TechnologyItem src={eslint} id="ESLint" used={true} />
+                    <TechnologyItem src={html} id="HTML5" used={true} />
+                    <TechnologyItem src={nodeJs} id="Node.js" used={true} />
+                    <TechnologyItem src={javaScript} id="JavaScript" used={true} />
+                    <TechnologyItem src={axios} id="Axios" used={true} />
+                    <TechnologyItem src={express} id="Express" used={true} />
+                    <TechnologyItem src={svelt} id="Svelt" used={false} />
                 </div>
                 <div className={styles.rowEven}>
-                    <div className={styles.item}>
-                        <img src={jwt} alt="" width={42} height={42} id="jwt" />
-                        <Tooltip
-                            content="JWT"
-                            anchorId="jwt"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={prettier} alt="" width={42} height={42} id="prettier" />
-                        <Tooltip
-                            content="Prettier"
-                            anchorId="prettier"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={jsx} alt="" width={42} height={42} id="jsx" />
-                        <Tooltip
-                            content="JSX"
-                            anchorId="jsx"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={npm} alt="" width={42} height={42} id="npm" />
-                        <Tooltip
-                            content="npm"
-                            anchorId="npm"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={vs} alt="" width={42} height={42} id="vs" />
-                        <Tooltip
-                            content="Visual Studio Code"
-                            anchorId="vs"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={nestjs} alt="" width={42} height={42} id="nestjs" />
-                        <Tooltip
-                            content="NestJS"
-                            anchorId="nestjs"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
+                    <TechnologyItem src={yarn} id="Yarn" used={false} />
+                    <TechnologyItem src={jwt} id="JSON Web Token" used={true} />
+                    <TechnologyItem src={prettier} id="Prettier" used={true} />
+                    <TechnologyItem src={jsx} id="JSX" used={true} />
+                    <TechnologyItem src={npm} id="npm" used={true} />
+                    <TechnologyItem src={vs} id="Visual Studio Code" used={true} />
+                    <TechnologyItem src={nestjs} id="NestJS" used={false} />
+                    <TechnologyItem src={angular} id="Angular" used={false} />
                 </div>
                 <div className={styles.rowOdd}>
-                    <div className={styles.item}>
-                        <img src={nextjs} alt="" width={42} height={42} id="nextjs" />
-                        <Tooltip
-                            content="Next.js"
-                            anchorId="nextjs"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={tailwind} alt="" width={42} height={42} id="tailwind" />
-                        <Tooltip
-                            content="Tailwind CSS"
-                            anchorId="tailwind"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={git} alt="" width={42} height={42} id="git" />
-                        <Tooltip
-                            content="Git"
-                            anchorId="git"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={babel} alt="" width={42} height={42} id="babel" />
-                        <Tooltip
-                            content="Babel"
-                            anchorId="babel"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={webpack} alt="" width={42} height={42} id="webpack" />
-                        <Tooltip
-                            content="Webpack"
-                            anchorId="webpack"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
+                    <TechnologyItem src={electron} id="Electron" used={false} />
+                    <TechnologyItem src={nextjs} id="Next.js" used={false} />
+                    <TechnologyItem src={tailwind} id="Tailwind CSS" used={false} />
+                    <TechnologyItem src={git} id="Git" used={true} />
+                    <TechnologyItem src={babel} id="Babel" used={true} />
+                    <TechnologyItem src={webpack} id="Webpack" used={false} />
+                    <TechnologyItem src={styledComponents} id="Styled Components" used={false} />
                 </div>
                 <div className={styles.rowOdd}>
-                    <div className={styles.item}>
-                        <img src={figma} alt="" width={42} height={42} id="figma" />
-                        <Tooltip
-                            content="Figma"
-                            anchorId="figma"
-                            place="top"
-                            className={styles.tooltip}
+                    <TechnologyItem src={esbuild} id="esbuild" used={true} />
+                    <TechnologyItem src={figma} id="Figma" used={false} />
+                    <TechnologyItem src={materialui} id="Material UI" used={false} />
+                    <TechnologyItem src={webstorm} id="WebStorm" used={false} />
+                    <TechnologyItem src={testinglibrary} id="React Testing Library" used={false} />
+                    <TechnologyItem src={vue} id="Vue" used={false} />
+                </div>
+                <div
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        marginTop: '25px',
+                        gap: '10px',
+                    }}
+                >
+                    <TechnologyItem src={transparent} used={true} />
+                    <h3>
+                        <Text
+                            eng={'Technology that i usedfrett in this project'}
+                            rus="Технология, которую я использовал в данном проекте"
                         />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={materialui} alt="" width={42} height={42} id="materialui" />
-                        <Tooltip
-                            content="Material UI"
-                            anchorId="materialui"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img src={webstorm} alt="" width={42} height={42} id="webstorm" />
-                        <Tooltip
-                            content="WebStorm"
-                            anchorId="webstorm"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <img
-                            src={testinglibrary}
-                            alt=""
-                            width={42}
-                            height={42}
-                            id="testinglibrary"
-                        />
-                        <Tooltip
-                            content="React Testing Library"
-                            anchorId="testinglibrary"
-                            place="top"
-                            className={styles.tooltip}
-                        />
-                    </div>
+                    </h3>
                 </div>
                 <div className={styles.footer}>
                     <Footer />

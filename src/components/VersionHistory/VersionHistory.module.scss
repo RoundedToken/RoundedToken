@@ -5,12 +5,11 @@
     margin-block: 20px;
     margin-inline: 100px;
     padding: 20px;
-    width: 540px;
+    width: 616px;
     margin-inline: auto;
     border-radius: 15px;
     background-color: var(--first-color);
     transition: background-color 1.5s;
-    gap: 20px;
     text-align: center;
 
     h1,
@@ -24,7 +23,11 @@
     }
 
     li {
-        margin: 2px;
+        margin: 4px;
+    }
+    h2 {
+        margin: 0px;
+        align-self: flex-start;
     }
 }
 
@@ -35,4 +38,6 @@
     justify-content: flex-start;
     text-align: left;
     gap: 10px;
+    height: 500px;
+    overflow-y: scroll;
 }

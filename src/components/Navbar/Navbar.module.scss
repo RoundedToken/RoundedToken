@@ -1,0 +1,13 @@
+.navbar {
+    position: fixed;
+    right: 0px;
+    top: 105px;
+    background-color: var(--first-color);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 0px 0px 15px;
+    transition: 1.5s;
+}
