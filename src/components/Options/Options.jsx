@@ -18,6 +18,7 @@ const ThemeSwitcher = () => {
     const page = useSelector((state) => state.page.page);
     const theme = useSelector((state) => state.theme.color);
     const close = useSelector((state) => state.settings.close);
+    console.log(page);
 
     const changeTheme = () => {
         dispatch(toggleTheme());
@@ -59,7 +60,7 @@ const ThemeSwitcher = () => {
                 toggled={theme === 'dark' ? true : false}
             />
 
-            {!page === '' && (
+            {page === '' && (
                 <button
                     title={lang === 'eng' ? 'Settings' : 'Настройки'}
                     className={rotate ? styles.settings : styles.settingsRotate}
