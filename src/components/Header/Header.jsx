@@ -11,7 +11,7 @@ import OK from '../../assets/OK.svg';
 import Text from '../Text/Text';
 
 const Header = () => {
-    const lang = useSelector((state) => state.language.lang);
+    const lang = useSelector((state) => state.input.lang);
     const user = useSelector((state) => state.auth.user);
     const isAuth = useSelector((state) => state.auth.isAuth);
     const dispatch = useDispatch();

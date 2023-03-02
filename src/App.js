@@ -2,7 +2,6 @@ import Header from './components/Header/Header';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.scss';
 import Main from './components/Main/Main';
-import WhatsNew from './components/WhatsNew/WhatsNew';
 import { Flip, ToastContainer } from 'react-toastify';
 import { useEffect } from 'react';
 import { checkAuth } from './redux/authSlice';
@@ -13,7 +12,6 @@ import Anchor from './components/Anchor/Anchor';
 function App() {
     const isLoading = useSelector((state) => state.auth.isLoading);
     const theme = useSelector((state) => state.theme.color);
-    const update = useSelector((state) => state.update.status);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -32,20 +30,13 @@ function App() {
 
             <Header />
 
-            {update ? (
-                <WhatsNew />
-            ) : (
-                <>
-                    <Main />
-                    <Navbar />
-                </>
-            )}
+            <Main />
+            <Navbar />
 
             <ToastContainer
                 position="bottom-right"
-                autoClose={250}
+                autoClose={1500}
                 limit={6}
-                hideProgressBar
                 newestOnTop
                 closeOnClick
                 rtl={false}

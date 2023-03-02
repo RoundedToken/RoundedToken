@@ -65,7 +65,7 @@ export const authSlice = createSlice({
             })
             .addCase(registration.rejected.type, (state, action) => {
                 state.isLoading = false;
-                state.error = action.payload;
+                state.error = action.payload === undefined ? 'Unknown error' : action.payload;
             })
 
             //logout
@@ -79,7 +79,7 @@ export const authSlice = createSlice({
             })
             .addCase(logout.rejected.type, (state, action) => {
                 state.isLoading = false;
-                state.error = action.payload;
+                state.error = action.payload === undefined ? 'Unknown error' : action.payload;
             })
 
             //login
@@ -94,7 +94,7 @@ export const authSlice = createSlice({
             })
             .addCase(login.rejected.type, (state, action) => {
                 state.isLoading = false;
-                state.error = action.payload;
+                state.error = action.payload === undefined ? 'Unknown error' : action.payload;
             })
 
             //refresh
@@ -109,7 +109,7 @@ export const authSlice = createSlice({
             })
             .addCase(checkAuth.rejected.type, (state, action) => {
                 state.isLoading = false;
-                state.error = action.payload;
+                state.error = action.payload === undefined ? 'Unknown error' : action.payload;
             });
     },
 });

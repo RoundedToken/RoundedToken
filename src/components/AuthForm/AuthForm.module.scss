@@ -10,7 +10,17 @@
     margin-top: 20px;
     border-radius: 15px;
     gap: 15px;
-    transition: 1.5s;
+    box-shadow: 3px 3px 3px var(--image-color);
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px var(--second-color);
+
+    h4 {
+        align-self: flex-start;
+    }
+}
+
+.form:hover {
+    box-shadow: 3px 3px 3px var(--text-color);
 }
 
 .bottomLine {
@@ -41,9 +51,18 @@
     outline: none;
     background-color: var(--second-color);
     border: 0px;
-    color: var(--text-color);
+    color: var(--image-color);
     height: 25px;
-    transition: 1.5s;
+    box-shadow: 1px 1px 1px var(--image-color);
+}
+
+.input:hover {
+    box-shadow: 1px 1px 1px var(--text-color);
+}
+
+.input:focus {
+    color: var(--text-color);
+    box-shadow: 1px 1px 1px var(--text-color);
 }
 
 .logIn {
@@ -52,11 +71,17 @@
     align-items: center;
     border-radius: 5px;
     padding: 5px;
-    color: var(--text-color);
+    color: var(--image-color);
     border-radius: 5px;
-    border: 2px solid var(--text-color);
-    font-size: 14px;
-    transition: 1.5s;
+    border: 2px solid var(--image-color);
+    font-size: 16px;
+    box-shadow: 1px 1px 1px var(--second-color);
+    text-shadow: 1px 1px 1px var(--second-color);
+}
+
+.logIn:hover {
+    border-color: var(--text-color);
+    color: var(--text-color);
 }
 
 .inputPass {
@@ -68,35 +93,6 @@
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-    transition: background-color 600000s 0s, color 600000s 0s;
-}
-
-h4 {
-    margin: 0px;
-    align-self: flex-start;
-}
-
-h5 {
-    margin: 0px;
-    font-size: 14px;
-}
-a:visited {
-    color: var(--image-color);
-}
-a:active {
-    color: var(--image-color);
-}
-a:hover {
-    color: var(--text-color);
-    transition: color 1.5s;
-}
-a {
-    color: var(--image-color);
-    transition: color 1.5s;
-    height: min-content;
-    text-decoration: none;
-    width: max-content;
-    font-size: 14px;
 }
 
 /* Customize the label (the container) */
@@ -112,6 +108,8 @@ a {
     -ms-user-select: none;
     user-select: none;
     font-size: 14px;
+    text-shadow: 1px 1px 1px var(--second-color);
+    color: var(--image-color);
 }
 
 /* Hide the browser's default checkbox */
@@ -131,7 +129,15 @@ a {
     height: 20px;
     width: 20px;
     background-color: var(--second-color);
-    transition: 1.5s;
+    box-shadow: 1px 1px 1px var(--image-color);
+}
+
+.container:hover .checkmark {
+    box-shadow: 1px 1px 1px var(--text-color);
+}
+
+.container:hover {
+    color: var(--text-color);
 }
 
 /* On mouse-over, add a grey background color */
@@ -142,6 +148,7 @@ a {
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
     background-color: var(--second-color);
+    box-shadow: 1px 1px 1px var(--text-color);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -167,11 +174,11 @@ a {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    transition: 1.5s;
 }
 
 .tooltip {
     background-color: var(--alternative-color);
+    box-shadow: 2px 2px 2px var(--image-color);
 }
 
 .green {

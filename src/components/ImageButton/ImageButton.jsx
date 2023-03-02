@@ -5,7 +5,7 @@ import styles from './ImageButton.module.scss';
 import 'react-tooltip/dist/react-tooltip.css';
 
 const ImageButton = ({ f, src, width, height, id, content, place, tooltipId }) => {
-    const lang = useSelector((state) => state.language.lang);
+    const lang = useSelector((state) => state.input.lang);
     const theme = useSelector((state) => state.theme.color);
 
     return (

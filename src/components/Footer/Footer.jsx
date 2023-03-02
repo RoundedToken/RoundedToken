@@ -31,24 +31,6 @@ const Footer = () => {
                     place={'right'}
                 />
             </div>
-
-            <div className={styles.container}>
-                <h5>
-                    <Text
-                        eng={'If you like the app, give it a star on GitHub!'}
-                        rus="Если Вам понравилось приложение, поставьте звезду на GitHub!"
-                    />
-                </h5>
-                <SocialLink
-                    id={'gitHub'}
-                    content={<Text eng={'Go to GitHub'} rus="Перейти на GitHub" />}
-                    place={'right'}
-                    src={github}
-                    href={'https://github.com/RoundedToken/RoundedToken'}
-                    width={32}
-                    height={32}
-                />
-            </div>
             <div className={styles.container}>
                 <h5>
                     <Text eng={'Check up my profiles'} rus="Мои профили" />
@@ -77,6 +59,34 @@ const Footer = () => {
                     place="bottom"
                     src={w3schools}
                     href="https://www.w3profile.com/RoundedToken"
+                    width={32}
+                    height={32}
+                />
+            </div>
+            <div className={styles.container}>
+                <h5>
+                    <Text eng={'Frond-end code'} rus="Фронт-енд код" />
+                </h5>
+                <SocialLink
+                    id={'gitHubFront'}
+                    content={<Text eng={'Go to GitHub'} rus="Перейти на GitHub" />}
+                    place={'right'}
+                    src={github}
+                    href={'https://github.com/RoundedToken/RoundedToken/tree/master'}
+                    width={32}
+                    height={32}
+                />
+            </div>
+            <div className={styles.container}>
+                <h5>
+                    <Text eng={'Back-end code'} rus="Бек-енд код" />
+                </h5>
+                <SocialLink
+                    id={'gitHubBack'}
+                    content={<Text eng={'Go to GitHub'} rus="Перейти на GitHub" />}
+                    place={'right'}
+                    src={github}
+                    href={'https://github.com/RoundedToken/RoundedToken_back-end'}
                     width={32}
                     height={32}
                 />

@@ -14,7 +14,7 @@ import Text from '../Text/Text';
 
 const OutputWindow = () => {
     const dispatch = useDispatch();
-    const lang = useSelector((state) => state.language.lang);
+    const lang = useSelector((state) => state.input.lang);
     const decimalsCount = useSelector((state) => state.input.decimalsCount);
     const float = useSelector((state) => state.input.float);
     const tableMode = useSelector((state) => state.input.tableMode);
@@ -88,9 +88,13 @@ const OutputWindow = () => {
                                                   }
                                                   key={i}
                                               >
-                                                  <td style={{ display: 'flex' }}>
-                                                      <div id={`up${i}`}>{output.upFloat[i]}</div>
-                                                      <CopyButton id={`up${i}`} />
+                                                  <td>
+                                                      <div style={{ display: 'flex' }}>
+                                                          <div id={`up${i}`}>
+                                                              {output.upFloat[i]}
+                                                          </div>
+                                                          <CopyButton id={`up${i}`} />
+                                                      </div>
                                                   </td>
                                                   <td style={{ textAlign: 'right' }}>
                                                       {output.upDiff[i][1]}
@@ -108,9 +112,11 @@ const OutputWindow = () => {
                                                 : { color: 'rgb(255,95,94)' }
                                         }
                                     >
-                                        <td style={{ display: 'flex' }}>
-                                            <div id="number">{output.numberFloat}</div>
-                                            <CopyButton id={'number'} />
+                                        <td>
+                                            <div style={{ display: 'flex' }}>
+                                                <div id="number">{output.numberFloat}</div>
+                                                <CopyButton id={'number'} />
+                                            </div>
                                         </td>
                                         <td>-</td>
                                         <td>-</td>
@@ -128,14 +134,18 @@ const OutputWindow = () => {
                                                   }
                                                   key={i}
                                               >
-                                                  <td
-                                                      style={{
-                                                          display: 'flex',
-                                                          justifyContent: 'right',
-                                                      }}
-                                                  >
-                                                      <div id={`low${i}`}>{output.lowFloat[i]}</div>
-                                                      <CopyButton id={`low${i}`} />
+                                                  <td>
+                                                      <div
+                                                          style={{
+                                                              display: 'flex',
+                                                              justifyContent: 'right',
+                                                          }}
+                                                      >
+                                                          <div id={`low${i}`}>
+                                                              {output.lowFloat[i]}
+                                                          </div>
+                                                          <CopyButton id={`low${i}`} />
+                                                      </div>
                                                   </td>
                                                   <td style={{ textAlign: 'right' }}>
                                                       {output.lowDiff[i][1]}
@@ -189,11 +199,13 @@ const OutputWindow = () => {
                             <tbody>
                                 {output.uppestIndex === undefined ? null : (
                                     <tr style={{ color: 'rgb(25,184,76)' }}>
-                                        <td style={{ display: 'flex' }}>
-                                            <div id="uppest">
-                                                {output.upFloat[output.uppestIndex]}
+                                        <td>
+                                            <div style={{ display: 'flex' }}>
+                                                <div id="uppest">
+                                                    {output.upFloat[output.uppestIndex]}
+                                                </div>
+                                                <CopyButton id={'uppest'} />
                                             </div>
-                                            <CopyButton id={'uppest'} />
                                         </td>
                                         <td style={{ textAlign: 'right' }}>
                                             {output.upDiff[output.uppestIndex][1]}
@@ -211,9 +223,11 @@ const OutputWindow = () => {
                                             : { color: 'rgb(255,95,94)' }
                                     }
                                 >
-                                    <td style={{ display: 'flex' }}>
-                                        <div id="number">{output.numberFloat}</div>
-                                        <CopyButton id={'number'} />
+                                    <td>
+                                        <div style={{ display: 'flex' }}>
+                                            <div id="number">{output.numberFloat}</div>
+                                            <CopyButton id={'number'} />
+                                        </div>
                                     </td>
                                     <td>-</td>
                                     <td>-</td>
@@ -222,11 +236,15 @@ const OutputWindow = () => {
                                 </tr>
                                 {output.lowestIndex === undefined ? null : (
                                     <tr style={{ color: 'rgb(25,184,76)' }}>
-                                        <td style={{ display: 'flex', justifyContent: 'right' }}>
-                                            <div id="lowest">
-                                                {output.lowFloat[output.lowestIndex]}
+                                        <td>
+                                            <div
+                                                style={{ display: 'flex', justifyContent: 'right' }}
+                                            >
+                                                <div id="lowest">
+                                                    {output.lowFloat[output.lowestIndex]}
+                                                </div>
+                                                <CopyButton id={'lowest'} />
                                             </div>
-                                            <CopyButton id={'lowest'} />
                                         </td>
                                         <td style={{ textAlign: 'right' }}>
                                             {output.lowDiff[output.lowestIndex][1]}

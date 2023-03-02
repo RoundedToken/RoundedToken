@@ -1,28 +1,38 @@
 import React from 'react';
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLimitOptions } from '../../redux/inputSlice';
 import Text from '../Text/Text';
 import styles from './LimitOptions.module.scss';
+import questionIcon from '../../assets/question.svg';
+import { Tooltip } from 'react-tooltip';
 
 const LimitOptions = () => {
     const dispatch = useDispatch();
-    const lang = useSelector((state) => state.language.lang);
+    const lang = useSelector((state) => state.input.lang);
     const limitOptions = useSelector((state) => state.input.limitOptions);
-
-    useEffect(() => {
-        if (limitOptions === 'in %') dispatch(setLimitOptions('в %'));
-        if (limitOptions === 'by decimals') dispatch(setLimitOptions('по десятичным'));
-        if (limitOptions === 'absolute') dispatch(setLimitOptions('абсолютный'));
-        if (limitOptions === 'в %') dispatch(setLimitOptions('in %'));
-        if (limitOptions === 'по десятичным') dispatch(setLimitOptions('by decimals'));
-        if (limitOptions === 'абсолютный') dispatch(setLimitOptions('absolute'));
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [lang]);
 
     return (
         <div className={styles.limitOptions}>
-            <h5>
+            <h5 style={{ display: 'flex', gap: '4px' }}>
+                <img
+                    id="limitOptions"
+                    className={styles.editIcon}
+                    src={questionIcon}
+                    alt=""
+                    width={24}
+                    height={24}
+                />
+                <Tooltip
+                    anchorId="limitOptions"
+                    place="bottom"
+                    className={styles.tooltip}
+                    content={
+                        <Text
+                            eng={'You can choose the limit type and customize it'}
+                            rus="Вы можете выбрать тип предела и настроить его"
+                        />
+                    }
+                />
                 <Text eng={'Difference limit'} rus="Предел разницы" />
             </h5>
             <select

@@ -1,22 +1,20 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import MyTechnologies from '../components/MyTechnologies/MyTechnologies';
-import VersionHistory from '../components/VersionHistory/VersionHistory';
 import { setPage } from '../redux/pageSlice';
 
-const Versions = () => {
+const About = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(setPage('versions'));
+        dispatch(setPage('about'));
     }, [dispatch]);
 
     return (
         <>
             <MyTechnologies />
-            <VersionHistory />
         </>
     );
 };
 
-export default Versions;
+export default About;

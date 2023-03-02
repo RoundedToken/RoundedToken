@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 
 const InputWindow = () => {
     const dispatch = useDispatch();
-    const lang = useSelector((state) => state.language.lang);
+    const lang = useSelector((state) => state.input.lang);
     const float = useSelector((state) => state.input.float);
     const inputRef = useRef();
 
@@ -41,7 +41,13 @@ const InputWindow = () => {
                     />
                     {float !== '' && (
                         <button onClick={clearFloat} title={lang === 'eng' ? 'Clear' : 'Очистить'}>
-                            <img src={close} alt="close" width={16} height={16} />
+                            <img
+                                className={styles.close}
+                                src={close}
+                                alt="close"
+                                width={16}
+                                height={16}
+                            />
                         </button>
                     )}
                 </div>

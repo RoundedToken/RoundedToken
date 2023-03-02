@@ -13,52 +13,65 @@
     background-color: transparent;
     border: 0;
     cursor: pointer;
+    filter: drop-shadow(2px 2px 3px var(--second-color));
+    width: 48px;
+    height: 48px;
+    transform: rotate(360def);
+    transition: transform 1.5s;
+}
+
+.settingsRotate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 3px var(--second-color));
+    width: 48px;
+    height: 48px;
+    transform: rotate(-360deg);
+    transition: transform 1.5s;
 }
 
 .toggle {
     font-size: 48px;
     color: var(--image-color);
-    transition: color 1.5s;
     padding: 0px;
     display: flex;
     align-items: center;
+    filter: drop-shadow(2px 2px 3px var(--second-color));
 }
 
 .langSwitcher {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.h2 {
+    text-shadow: 2px 2px 3px var(--second-color);
+    font-size: 24px;
     color: var(--image-color);
 }
 
-.h2:hover {
+.langSwitcher:hover {
     color: var(--text-color);
 }
 
 .toggle:hover {
     color: var(--text-color);
-    transition: color 1.5s;
 }
 
 .filterDark {
     filter: invert(30%) sepia(84%) saturate(1270%) hue-rotate(242deg) brightness(84%) contrast(78%);
-    transition: filter 1.5s;
 }
 
 .filterDark:hover {
     filter: invert(75%) sepia(58%) saturate(4161%) hue-rotate(214deg) brightness(102%) contrast(94%);
-    transition: filter 1.5s;
 }
 
 .filterLight {
     filter: invert(75%) sepia(58%) saturate(4161%) hue-rotate(214deg) brightness(102%) contrast(94%);
-    transition: filter 1.5s;
 }
 
 .filterLight:hover {
     filter: invert(30%) sepia(84%) saturate(1270%) hue-rotate(242deg) brightness(84%) contrast(78%);
-    transition: filter 1.5s;
 }

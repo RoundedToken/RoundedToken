@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const CopyButton = ({ id }) => {
-    const lang = useSelector((state) => state.language.lang);
+    const lang = useSelector((state) => state.input.lang);
     const theme = useSelector((state) => state.theme.color);
     function copyEvent(id) {
         var str = document.getElementById(id);

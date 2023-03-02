@@ -8,7 +8,7 @@
     margin-inline: auto;
     border-radius: 15px;
     background-color: var(--first-color);
-    transition: background-color 1.5s;
+    box-shadow: 3px 3px 3px var(--image-color);
 
     h1 {
         text-align: center;
@@ -34,6 +34,10 @@
     h5 {
         margin: 0px;
     }
+}
+
+.technologies:hover {
+    box-shadow: 3px 3px 3px var(--text-color);
 }
 
 .footer {

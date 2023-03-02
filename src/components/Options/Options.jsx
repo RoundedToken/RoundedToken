@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './Options.module.scss';
 import { Within } from '@theme-toggles/react';
@@ -9,15 +9,15 @@ import { setClose } from '../../redux/settingsSlice';
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
 import Text from '../Text/Text';
-import { setLang } from '../../redux/languageSlice';
+import { setLang } from '../../redux/inputSlice';
 
 const ThemeSwitcher = () => {
     const dispatch = useDispatch();
-    const lang = useSelector((state) => state.language.lang);
+    const [rotate, setRotate] = useState(true);
+    const lang = useSelector((state) => state.input.lang);
     const page = useSelector((state) => state.page.page);
     const theme = useSelector((state) => state.theme.color);
     const close = useSelector((state) => state.settings.close);
-    const update = useSelector((state) => state.update.status);
 
     const changeTheme = () => {
         dispatch(toggleTheme());
@@ -28,9 +28,15 @@ const ThemeSwitcher = () => {
 
     const changeSettings = () => {
         dispatch(setClose());
+        setRotate(!rotate);
         lang === 'eng'
             ? toast.success(close ? 'Settings opened!' : 'Settings closed!')
             : toast.success(close ? 'Настройки открыты!' : 'Настройки закрыты!');
+    };
+
+    const changeLang = () => {
+        dispatch(setLang());
+        toast.success(lang === 'eng' ? 'Язык изменен!' : 'Language changed!');
     };
 
     useEffect(() => {}, [page]);
@@ -40,11 +46,9 @@ const ThemeSwitcher = () => {
             <button
                 title={lang === 'eng' ? 'Change language' : 'Сменить язык'}
                 className={styles.langSwitcher}
-                onClick={() => dispatch(setLang())}
+                onClick={changeLang}
             >
-                <h2 className={styles.h2}>
-                    <Text eng="ENG" rus="RUS" />
-                </h2>
+                <Text eng="ENG" rus="RUS" />
             </button>
 
             <Within
@@ -55,17 +59,17 @@ const ThemeSwitcher = () => {
                 toggled={theme === 'dark' ? true : false}
             />
 
-            {!update && page === '' && (
+            {!page === '' && (
                 <button
                     title={lang === 'eng' ? 'Settings' : 'Настройки'}
-                    className={styles.settings}
+                    className={rotate ? styles.settings : styles.settingsRotate}
                     onClick={changeSettings}
                 >
                     <img
                         className={theme === 'dark' ? styles.filterDark : styles.filterLight}
                         src={settings}
-                        height={48}
-                        width={48}
+                        height={54}
+                        width={54}
                         alt="settings"
                     />
                 </button>

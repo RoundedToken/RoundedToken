@@ -7,6 +7,7 @@ import minus from '../../assets/minus.svg';
 
 const DecimalsLimit = () => {
     const dispatch = useDispatch();
+    const lang = useSelector((state) => state.input.lang);
     const decimalsLimit = useSelector((state) => state.input.decimalsLimit);
     const decimalsCount = useSelector((state) => state.input.decimalsCount);
     const theme = useSelector((state) => state.theme.color);
@@ -19,7 +20,10 @@ const DecimalsLimit = () => {
     return (
         <div className={styles.decimalsLimit}>
             <div className={styles.input}>
-                <button onClick={() => dispatch(setDecimalsLimit(Number(decimalsLimit) - 1))}>
+                <button
+                    title={lang === 'eng' ? 'Decrease' : 'Уменьшить'}
+                    onClick={() => dispatch(setDecimalsLimit(Number(decimalsLimit) - 1))}
+                >
                     <img
                         src={minus}
                         alt=""
@@ -36,7 +40,10 @@ const DecimalsLimit = () => {
                     max={decimalsCount}
                     onChange={(e) => dispatch(setDecimalsLimit(e.target.value))}
                 />
-                <button onClick={() => dispatch(setDecimalsLimit(Number(decimalsLimit) + 1))}>
+                <button
+                    title={lang === 'eng' ? 'Increase' : 'Увеличить'}
+                    onClick={() => dispatch(setDecimalsLimit(Number(decimalsLimit) + 1))}
+                >
                     <img
                         src={plus}
                         alt=""

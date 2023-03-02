@@ -7,62 +7,73 @@ import Text from '../Text/Text';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
-    const lang = useSelector((state) => state.language.lang);
+    const lang = useSelector((state) => state.input.lang);
     const isAuth = useSelector((state) => state.auth.isAuth);
     const page = useSelector((state) => state.page.page);
     const dispatch = useDispatch();
-    const active = { color: 'var(--text-color)', textDecoration: 'underline' };
 
     useEffect(() => {}, [page]);
 
     return (
         <div className={styles.navbar}>
-            <Link
-                title={lang === 'eng' ? 'Go to main page' : 'Перейти на главную страницу'}
-                to={'/'}
-                onClick={() => dispatch(setPage(''))}
-            >
-                <h2 style={page === '' ? active : null}>
-                    <Text eng={'Main'} rus={'Главная'} />
-                </h2>
-            </Link>
-            <Link
-                title={lang === 'eng' ? 'Go to about page' : 'Перейти на страницу описания'}
-                to={'/versions'}
-                onClick={() => dispatch(setPage('versions'))}
-            >
-                <h2 style={page === 'versions' ? active : null}>
-                    <Text eng={'About'} rus="Описание" />
-                </h2>
-            </Link>
+            <div className={page === '' ? styles.navbarItemActive : styles.navbarItem}>
+                <Link
+                    title={lang === 'eng' ? 'Go to main page' : 'Перейти на главную страницу'}
+                    to={'/'}
+                    onClick={() => dispatch(setPage(''))}
+                >
+                    <h3>
+                        <Text eng={'Main'} rus={'Главная'} />
+                    </h3>
+                </Link>
+            </div>
+            <div className={page === 'about' ? styles.navbarItemActive : styles.navbarItem}>
+                <Link
+                    title={lang === 'eng' ? 'Go to about page' : 'Перейти на страницу описания'}
+                    to={'/about'}
+                    onClick={() => dispatch(setPage('about'))}
+                >
+                    <h3>
+                        <Text eng={'About'} rus="Описание" />
+                    </h3>
+                </Link>
+            </div>
             {!isAuth && (
                 <>
-                    <Link
-                        title={
-                            lang === 'eng'
-                                ? 'Go to authorization page'
-                                : 'Перейти на страницу авторизации'
+                    <div className={page === 'auth' ? styles.navbarItemActive : styles.navbarItem}>
+                        <Link
+                            title={
+                                lang === 'eng'
+                                    ? 'Go to authorization page'
+                                    : 'Перейти на страницу авторизации'
+                            }
+                            to={'/auth'}
+                            onClick={() => dispatch(setPage('auth'))}
+                        >
+                            <h3>
+                                <Text eng={'Log in'} rus="Авторизация" />
+                            </h3>
+                        </Link>
+                    </div>
+                    <div
+                        className={
+                            page === 'register' ? styles.navbarItemActive : styles.navbarItem
                         }
-                        to={'/auth'}
-                        onClick={() => dispatch(setPage('auth'))}
                     >
-                        <h2 style={page === 'auth' ? active : null}>
-                            <Text eng={'Log in'} rus="Авторизация" />
-                        </h2>
-                    </Link>
-                    <Link
-                        title={
-                            lang === 'eng'
-                                ? 'Go to registration page'
-                                : 'Перейти на страницу регистрации'
-                        }
-                        to={'/register'}
-                        onClick={() => dispatch(setPage('register'))}
-                    >
-                        <h2 style={page === 'register' ? active : null}>
-                            <Text eng={'Sign up'} rus="Регистрация" />
-                        </h2>
-                    </Link>
+                        <Link
+                            title={
+                                lang === 'eng'
+                                    ? 'Go to registration page'
+                                    : 'Перейти на страницу регистрации'
+                            }
+                            to={'/register'}
+                            onClick={() => dispatch(setPage('register'))}
+                        >
+                            <h3>
+                                <Text eng={'Sign up'} rus="Регистрация" />
+                            </h3>
+                        </Link>
+                    </div>
                 </>
             )}
         </div>

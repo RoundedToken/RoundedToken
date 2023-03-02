@@ -15,8 +15,8 @@ const TableInfo = () => {
                 id="tableInfo"
                 src={question}
                 alt=""
-                width={16}
-                height={16}
+                width={24}
+                height={24}
                 className={theme === 'dark' ? styles.filterDark : styles.filterLight}
             />
 

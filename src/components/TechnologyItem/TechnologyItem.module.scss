@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     background-color: var(--second-color);
-    transition: background-color 1.5s;
     width: 64px;
     height: 64px;
     border-radius: 100%;
@@ -14,7 +13,6 @@
     justify-content: center;
     align-items: center;
     background-color: var(--second-color);
-    transition: background-color 1.5s;
     width: 64px;
     height: 64px;
     border-radius: 100%;
@@ -45,4 +43,6 @@
 .tooltip {
     background-color: var(--alternative-color);
     color: var(--image-color);
+    text-shadow: 1px 1px 1px var(--second-color);
+    box-shadow: 2px 2px 2px var(--image-color);
 }

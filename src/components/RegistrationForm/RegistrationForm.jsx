@@ -11,7 +11,7 @@ import Text from '../Text/Text';
 
 const RegisterForm = () => {
     const dispatch = useDispatch();
-    const lang = useSelector((state) => state.language.lang);
+    const lang = useSelector((state) => state.input.lang);
     const isAuth = useSelector((state) => state.auth.isAuth);
     const error = useSelector((state) => state.auth.error);
     const [email, setEmail] = useState('');
@@ -166,9 +166,9 @@ const RegisterForm = () => {
                 />
                 {!isEmailValid && (
                     <Tooltip className={styles.tooltip} anchorId="email" place="right">
-                        <h4 style={{ color: 'rgb(255,95,94)' }}>
+                        <h5 style={{ color: 'rgb(255,95,94)' }}>
                             <Text eng={'Invalid mail format'} rus="Неверный формат почты" />
-                        </h4>
+                        </h5>
                     </Tooltip>
                 )}
             </div>
@@ -199,7 +199,7 @@ const RegisterForm = () => {
                     <Tooltip className={styles.tooltip} anchorId="password" place="right">
                         {Object.keys(passErrors).map((v) => {
                             return (
-                                <h3
+                                <h5
                                     style={
                                         passErrors[v].isValid
                                             ? { color: 'rgb(25,184,76)' }
@@ -208,7 +208,7 @@ const RegisterForm = () => {
                                     key={v}
                                 >{`${
                                     lang === 'eng' ? passErrors[v].textEng : passErrors[v].textRus
-                                }`}</h3>
+                                }`}</h5>
                             );
                         })}
                     </Tooltip>

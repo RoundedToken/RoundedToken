@@ -7,7 +7,7 @@ import styles from './ProgramName.module.scss';
 
 const ProgramName = () => {
     const dispatch = useDispatch();
-    const lang = useSelector((state) => state.language.lang);
+    const lang = useSelector((state) => state.input.lang);
     const theme = useSelector((state) => state.theme.color);
 
     return (

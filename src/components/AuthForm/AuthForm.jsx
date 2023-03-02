@@ -10,7 +10,7 @@ import Text from '../Text/Text';
 
 const AuthForm = () => {
     const dispatch = useDispatch();
-    const lang = useSelector((state) => state.language.lang);
+    const lang = useSelector((state) => state.input.lang);
     const error = useSelector((state) => state.auth.error);
     const isAuth = useSelector((state) => state.auth.isAuth);
     const [showPassword, setShowPassword] = useState(false);
