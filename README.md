@@ -40,3 +40,11 @@
 ![Hackerrank](https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white)
 ![Codewars](https://img.shields.io/badge/Codewars-B1361E?style=for-the-badge&logo=codewars&logoColor=grey)
 <img align='right' src='https://www.codewars.com/users/RoundedToken/badges/large'/>
+
+## My projects
+1. ***RoundedToken*** (Dec 2022)
+    - [repo](https://github.com/RoundedToken/rounded_token_app)
+    - [deployment](https://rounded-token-app-static.onrender.com/) 
+2. ***RopeBox*** (Mar 2023)
+    - [repo](https://github.com/RoundedToken/yacht_shop)
+    - deployment planned in May 2023
