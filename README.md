@@ -43,9 +43,9 @@
 <img align='right' src='https://www.codewars.com/users/RoundedToken/badges/large'/>
 
 ## My projects
-1. ***RoundedToken*** (Dec 2022)
+1. ***RoundedToken*** (started in Dec 2022) <sup>status: *release*</sup>
     - [repo](https://github.com/RoundedToken/rounded_token_app)
-    - [deployment](https://rounded-token-app-static.onrender.com/) 
-2. ***RopeBox*** (Mar 2023)
+    - [deploy](https://rounded-token-app-static.onrender.com/) 
+2. ***RopeBox*** (started in Mar 2023) <sup>status: *development*</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop)
-    - [deployment](https://shop.yachtshop.ee/)
+    - [deploy](https://shop.yachtshop.ee/)
