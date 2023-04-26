@@ -48,4 +48,4 @@
     - [deployment](https://rounded-token-app-static.onrender.com/) 
 2. ***RopeBox*** (Mar 2023)
     - [repo](https://github.com/RoundedToken/yacht_shop)
-    - deployment planned in May 2023
+    - [deployment](http://shop.yachtshop.ee/)
