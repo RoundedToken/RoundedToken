@@ -14,11 +14,18 @@
 
 - 📚 **Front-end stack** &emsp;
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
-
-- 📚 **CSS stack** &emsp;
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) 
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+- 🧪 **Testing** &emsp;
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+![Testing-Library](https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white)
+![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
+
+- 🔬 **CI** &emsp;
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![GitLab CI](https://img.shields.io/badge/gitlab%20ci-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
 
 - 🌐 **Browsers** &emsp;
 ![Brave](https://img.shields.io/badge/Brave-FB542B?style=for-the-badge&logo=Brave&logoColor=white)
@@ -40,7 +47,9 @@
 ## Algorithmic skills
 [![Hackerrank](https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white)](https://www.hackerrank.com/RoundedToken?hr_r=1)
 [![Codewars](https://img.shields.io/badge/Codewars-B1361E?style=for-the-badge&logo=codewars&logoColor=grey)](https://www.codewars.com/users/RoundedToken)
-<img align='right' src='https://www.codewars.com/users/RoundedToken/badges/large'/>
+[![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)](https://leetcode.com/RoundedToken/)
+[<img align='right' src='https://www.codewars.com/users/RoundedToken/badges/large'/>](https://www.codewars.com/users/RoundedToken)
+[![KnlnKS's LeetCode stats](https://leetcode-stats-six.vercel.app/api?username=RoundedToken&theme=dark)](https://leetcode.com/RoundedToken/)
 
 ## My projects
 1. ***RoundedToken*** (started in Dec 2022) <sup>status: *release*</sup>
