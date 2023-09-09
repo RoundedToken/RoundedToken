@@ -55,6 +55,8 @@
 1. ***RoundedToken*** (started in Dec 2022) <sup>status: *release*</sup>
     - [repo](https://github.com/RoundedToken/rounded_token_app)
     - [deploy](https://rounded-token-app-static.onrender.com/) 
-2. ***RopeBox*** (started in Feb 2023) <sup>status: *release*</sup>
+2. ***YachtShop*** (started in Feb 2023) <sup>status: *release*</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop)
     - [deploy](http://shop.yachtshop.ee/)
+3. ***YachtShopAdminPanel*** (started in Sep 2023) <sup>status: *in progress*</sup>
+    - [repo](https://github.com/RoundedToken/yacht_shop_admin)
