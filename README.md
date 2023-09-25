@@ -70,5 +70,5 @@
     - [deploy](https://rounded-token-app-static.onrender.com/) 
 3. ***TicketSearch*** (started in Jun 2023) <sup>status: *release*</sup>
     - [repo](https://github.com/RoundedToken/ticketSearch)
-4. ***YachtShopAdminPanel*** (started in Sep 2023) <sup>status: *release*</sup>
+4. ***YachtShop Admin Panel*** (started in Sep 2023) <sup>status: *release*</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop_admin)
