@@ -72,3 +72,5 @@
     - [repo](https://github.com/RoundedToken/ticketSearch)
 4. ***YachtShop Admin Panel*** (started in Sep 2023) <sup>status: *release*</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop_admin)
+5. ***YachtShop 2.0*** (started in Sep 2023) <sup>status: *in developing*</sup>
+    - [repo](https://github.com/RoundedToken/yacht_shop_2.0)
