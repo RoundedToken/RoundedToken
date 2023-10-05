@@ -64,10 +64,10 @@
 ## My projects
 1. ***YachtShop*** (started in Oct 2022) <sup>status: *release*</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop)
-    - [deploy](http://shop.yachtshop.ee/)
+    - [demo](http://shop.yachtshop.ee/)
 2. ***RoundedToken*** (started in Dec 2022) <sup>status: *release*</sup>
     - [repo](https://github.com/RoundedToken/rounded_token_app)
-    - [deploy](https://rounded-token-app-static.onrender.com/) 
+    - [demo](https://rounded-token-app-static.onrender.com/) 
 3. ***TicketSearch*** (started in Jun 2023) <sup>status: *release*</sup>
     - [repo](https://github.com/RoundedToken/ticketSearch)
 4. ***YachtShop Admin Panel*** (started in Sep 2023) <sup>status: *release*</sup>
