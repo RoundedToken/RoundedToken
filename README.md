@@ -74,3 +74,6 @@
     - [repo](https://github.com/RoundedToken/yacht_shop_admin)
 5. ***YachtShop 2.0*** (started in Sep 2023) <sup>status: *in developing*</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop_2.0)
+6. ***Mortgage Calculator*** (started in Oct 2023) <sup>status: *release*</sup>
+    - [repo](https://github.com/RoundedToken/mortgage_calculator_form)
+    - [demo](https://mortgage-calculator-form.onrender.com) 
