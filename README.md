@@ -2,21 +2,21 @@
 
 ## My projects
 ### Commercial projects
-1. **YachtShop** (started in Oct 2022) <sup>status: *release*</sup>
+1. **YachtShop** <sup>Oct 2022</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop)
     - [demo](http://shop.yachtshop.ee/)
-2. **YachtShop Admin Panel** (started in Sep 2023) <sup>status: *release*</sup>
+2. **YachtShop Admin Panel** <sup>Sep 2023</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop_admin)
-3. **YachtShop 2.0** (started in Sep 2023) <sup>status: *in developing*</sup>
+3. **YachtShop 2.0** <sup>Sep 2023</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop_2.0)
 ### Pet projects
-1. **RoundedToken** (started in Dec 2022) <sup>status: *release*</sup>
+1. **RoundedToken** <sup>Dec 2022</sup>
     - [repo](https://github.com/RoundedToken/rounded_token_app)
     - [demo](https://rounded-token-app-static.onrender.com/) 
-2. **TicketSearch** (started in Jun 2023) <sup>status: *release*</sup>
+2. **TicketSearch** <sup>Jun 2023</sup>
     - [repo](https://github.com/RoundedToken/ticketSearch)
     - [demo](https://ticketsearch.vercel.app/)
-3. **Mortgage Calculator** (started in Oct 2023) <sup>status: *release*</sup>
+3. **Mortgage Calculator** <sup>Oct 2023</sup>
     - [repo](https://github.com/RoundedToken/mortgage_calculator_form)
     - [demo](https://mortgage-calculator-form.onrender.com) 
 
