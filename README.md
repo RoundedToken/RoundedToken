@@ -4,12 +4,12 @@
 ### Commercial projects
 1. **YachtShop** <sup>Oct 2022</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop)
-    - [demo](http://shop.yachtshop.ee/)
+    - [demo](https://yachtshop.ee/)
 2. **YachtShop Admin Panel** <sup>Sep 2023</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop_admin)
 3. **YachtShop 2.0** <sup>Sep 2023</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop_2.0)
-    - [demo](https://uus.yachtshop.ee/)
+    - [demo](https://yachtshop.ee/)
 ### Pet projects
 1. **RoundedToken** <sup>Dec 2022</sup>
     - [repo](https://github.com/RoundedToken/rounded_token_app)
