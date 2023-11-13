@@ -3,28 +3,28 @@
 ## My projects
 ### Commercial projects
 
-1. **YachtShop 2.0** <sup>Sep 2023</sup>
+1. **YachtShop 2.0** <sup>E-commerce</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop_2.0)
     - [demo](https://yachtshop.ee/)
-2. **YachtShop Admin Panel** <sup>Sep 2023</sup>
+2. **YachtShop Admin Panel** <sup>Admin-panel</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop_admin)
-3. **YachtShop** <sup>Oct 2022</sup>
+3. **YachtShop** <sup>E-commerce</sup>
     - [repo](https://github.com/RoundedToken/yacht_shop)
     - [demo](https://yachtshop.ee/)
 
 ### Pet projects
 
-1. **Mortgage Calculator** <sup>Oct 2023</sup>
+1. **Mortgage Calculator** 
     - [repo](https://github.com/RoundedToken/mortgage_calculator_form)
     - [demo](https://mortgage-calculator-form.onrender.com) 
-2. **TicketSearch** <sup>Jun 2023</sup>
+2. **TicketSearch** <sup>E-commerce</sup>
     - [repo](https://github.com/RoundedToken/ticketSearch)
     - [demo](https://ticketsearch.vercel.app/)
-3. **RoundedToken** <sup>Dec 2022</sup>
+3. **RoundedToken** <sup>ETH calculator</sup>
     - [repo](https://github.com/RoundedToken/rounded_token_app)
     - [demo](https://rounded-token-app-static.onrender.com/) 
 
-## About me and what i like
+## Skills
 - 📑 **Languages** &emsp;
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
