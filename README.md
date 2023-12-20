@@ -13,14 +13,16 @@
     - [demo](https://yachtshop.ee/)
 
 ### Pet projects
-
-1. **Mortgage Calculator** 
+1. **CoffeeHouse** <sup>Landing page</sup>
+    - [repo](https://github.com/RoundedToken/CoffeeHouse)
+    - [demo](https://rolling-scopes-school.github.io/roundedtoken-JSFE2023Q4/coffee-house/dist/)
+3. **Mortgage Calculator** <sup>Widget</sup>
     - [repo](https://github.com/RoundedToken/mortgage_calculator_form)
     - [demo](https://mortgage-calculator-form.onrender.com) 
-2. **TicketSearch** <sup>E-commerce</sup>
+4. **TicketSearch** <sup>E-commerce</sup>
     - [repo](https://github.com/RoundedToken/ticketSearch)
     - [demo](https://ticketsearch.vercel.app/)
-3. **RoundedToken** <sup>ETH calculator</sup>
+5. **RoundedToken** <sup>ETH calculator</sup>
     - [repo](https://github.com/RoundedToken/rounded_token_app)
     - [demo](https://rounded-token-app-static.onrender.com/) 
 
