@@ -13,7 +13,7 @@
     - [demo](https://yachtshop.ee/)
 
 ### Pet projects
-1. **Hangman** <sup>game</sup>
+1. **Hangman** <sup>Game</sup>
     - [repo](https://github.com/RoundedToken/hangman)
     - [demo](https://rolling-scopes-school.github.io/roundedtoken-JSFE2023Q4/hangman/dist/index.html)
 2. **CoffeeHouse** <sup>Landing page</sup>
