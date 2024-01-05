@@ -1,33 +1,13 @@
 # Hi there 👋 I'am ***Stepan*** [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=JavaScript+developer)](https://git.io/typing-svg)
 
 ## My projects
-### Commercial projects
-
-1. **YachtShop 2.0** <sup>E-commerce</sup>
-    - [repo](https://github.com/RoundedToken/yacht_shop_2.0)
-    - [demo](https://yachtshop.ee/)
-2. **YachtShop Admin Panel** <sup>Admin-panel</sup>
-    - [repo](https://github.com/RoundedToken/yacht_shop_admin)
-3. **YachtShop** <sup>E-commerce</sup>
-    - [repo](https://github.com/RoundedToken/yacht_shop)
-    - [demo](https://yachtshop.ee/)
-
-### Pet projects
-1. **Hangman** <sup>Game</sup>
-    - [repo](https://github.com/RoundedToken/hangman)
-    - [demo](https://rolling-scopes-school.github.io/roundedtoken-JSFE2023Q4/hangman/dist/index.html)
-2. **CoffeeHouse** <sup>Landing page</sup>
-    - [repo](https://github.com/RoundedToken/CoffeeHouse)
-    - [demo](https://rolling-scopes-school.github.io/roundedtoken-JSFE2023Q4/coffee-house/dist/)
-3. **Mortgage Calculator** <sup>Widget</sup>
-    - [repo](https://github.com/RoundedToken/mortgage_calculator_form)
-    - [demo](https://mortgage-calculator-form.onrender.com) 
-4. **TicketSearch** <sup>E-commerce</sup>
-    - [repo](https://github.com/RoundedToken/ticketSearch)
-    - [demo](https://ticketsearch.vercel.app/)
-5. **RoundedToken** <sup>ETH calculator</sup>
-    - [repo](https://github.com/RoundedToken/rounded_token_app)
-    - [demo](https://rounded-token-app-static.onrender.com/) 
+|  Pet projects                                   |         Commercial projects                                                                                |
+|----------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| <pre>**🎮 Hangman** <sup>Game</sup> <br/>   - [repo](https://github.com/RoundedToken/hangman)<br/>   - [demo](https://rolling-scopes-school.github.io/roundedtoken-JSFE2023Q4/hangman/dist/index.html)</pre>   | <pre>**⛵ YachtShop 2.0** <sup>E-commerce</sup> <br/>   - [repo](https://github.com/RoundedToken/yacht_shop_2.0)<br/>   - [demo](https://yachtshop.ee/)</pre> |
+| <pre>**🍰 CoffeeHouse** <sup>Landing page</sup> <br/>   - [repo](https://github.com/RoundedToken/CoffeeHouse)<br/>   - [demo](https://rolling-scopes-school.github.io/roundedtoken-JSFE2023Q4/coffee-house/dist/)</pre>   | <pre>**📊 YachtShop Admin Panel** <sup>Admin-panel</sup> <br/>   - [repo](https://github.com/RoundedToken/yacht_shop_admin) |
+| <pre>**🏦 Mortgage Calculator** <sup>Widget</sup> <br/>   - [repo](https://github.com/RoundedToken/mortgage_calculator_form)<br/>   - [demo](https://mortgage-calculator-form.onrender.com)</pre>   | <pre>**⛵ YachtShop** <sup>E-commerce</sup> <br/>   - [repo](https://github.com/RoundedToken/yacht_shop)<br/>   - [demo](https://yachtshop.ee/)</pre> |
+|<pre>**🍿 TicketSearch** <sup>E-commerce</sup> <br/>   - [repo](https://github.com/RoundedToken/ticketSearch)<br/>   - [demo](https://ticketsearch.vercel.app/)</pre>|<!--- COMM -->|
+|<pre>**💹 RoundedToken** <sup>ETH calculator</sup> <br/>   - [repo](https://github.com/RoundedToken/rounded_token_app)<br/>   - [demo](https://rounded-token-app-static.onrender.com/)</pre>|<!--- COMM -->|
 
 ## Skills
 - 📑 **Languages** &emsp;
@@ -95,3 +75,32 @@
 [![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)](https://leetcode.com/RoundedToken/)
 [<img align='right' src='https://www.codewars.com/users/RoundedToken/badges/large'/>](https://www.codewars.com/users/RoundedToken)
 ![](https://leetcard.jacoblin.cool/RoundedToken?ext=heatmap)
+
+<!---
+1. **YachtShop 2.0** <sup>E-commerce</sup>
+    - [repo](https://github.com/RoundedToken/yacht_shop_2.0)   
+    - [demo](https://yachtshop.ee/)                              
+2. **YachtShop Admin Panel** <sup>Admin-panel</sup>
+    - [repo](https://github.com/RoundedToken/yacht_shop_admin)
+3. **YachtShop** <sup>E-commerce</sup>
+    - [repo](https://github.com/RoundedToken/yacht_shop)
+    - [demo](https://yachtshop.ee/)
+
+### Pet projects
+1. **Hangman** <sup>Game</sup>
+    - [repo](https://github.com/RoundedToken/hangman)
+    - [demo](https://rolling-scopes-school.github.io/roundedtoken-JSFE2023Q4/hangman/dist/index.html)
+2. **CoffeeHouse** <sup>Landing page</sup>
+    - [repo](https://github.com/RoundedToken/CoffeeHouse)
+    - [demo](https://rolling-scopes-school.github.io/roundedtoken-JSFE2023Q4/coffee-house/dist/)
+3. **Mortgage Calculator** <sup>Widget</sup>
+    - [repo](https://github.com/RoundedToken/mortgage_calculator_form)
+    - [demo](https://mortgage-calculator-form.onrender.com) 
+4. **TicketSearch** <sup>E-commerce</sup>
+    - [repo](https://github.com/RoundedToken/ticketSearch)
+    - [demo](https://ticketsearch.vercel.app/)
+5. **RoundedToken** <sup>ETH calculator</sup>
+    - [repo](https://github.com/RoundedToken/rounded_token_app)
+    - [demo](https://rounded-token-app-static.onrender.com/)
+)
+--->
