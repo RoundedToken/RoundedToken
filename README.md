@@ -8,7 +8,7 @@
 | <pre>**🏦 Mortgage Calculator** <sup>Widget</sup> <br/>   - [repo](https://github.com/RoundedToken/mortgage_calculator_form)<br/>   - [demo](https://mortgage-calculator-form.onrender.com)</pre>   | <pre>**⛵ YachtShop** <sup>E-commerce</sup> <br/>   - [repo](https://github.com/RoundedToken/yacht_shop)<br/>   - [demo](https://yachtshop.ee/)</pre> |
 |<pre>**🍿 TicketSearch** <sup>E-commerce</sup> <br/>   - [repo](https://github.com/RoundedToken/ticketSearch)<br/>   - [demo](https://ticketsearch.vercel.app/)</pre>|<!--- COMM -->|
 |<pre>**💹 RoundedToken** <sup>ETH calculator</sup> <br/>   - [repo](https://github.com/RoundedToken/rounded_token_app)<br/>   - [demo](https://rounded-token-app-static.onrender.com/)</pre>|<!--- COMM -->|
-
+<!---
 ## Skills
 - 📑 **Languages** &emsp;
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
